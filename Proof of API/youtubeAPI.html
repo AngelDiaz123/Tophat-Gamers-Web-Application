@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+        <title>Youtube API Test</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+        <!-- the user id for youtube for myself -->
+        <p>youtube username: romion34</p>
+        <!-- the div for the videos -->
+        <div id="videos">
+                <!--<iframe id="ytplayer" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/l5PqNbaehHQ" frameborder="0"/>-->
+        </div>
+        <!-- the GET call for the videos of that specific user -->
+        <script type="text/javascript">
+                var videos = document.getElementById('videos');
+                $.ajax({
+                type: "GET",
+                url: "https://gdata.youtube.com/feeds/api/users/romion34/uploads",
+                dataType: "json",
+                data: {alt: 'json'},
+                success: function(response) {
+                        for(var i=0; i < response.feed.entry.length; i++){
+                                console.log(response.feed.entry[i].id.$t);
+
+                                var url      = response.feed.entry[i].id.$t,
+                                        parts    = url.toString().split("http://gdata.youtube.com/feeds/api/videos/"),
+                                        video_id = parts[1].toString();
+
+                                console.log('video_id', video_id);
+
+                                console.log("http://youtube.com/embed/"+video_id);
+
+                                var video = document.createElement("ytplayer");
+                                video.innerHTML='<iframe id="player" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/'+video_id+'?enablejsapi=1" frameborder="0"></iframe>';
+                                videos.appendChild(video);
+                        }
+                },
+                error: function(){
+                        alert("not working");
+                }
+        });
+
+        </script>
+</body>
+</html>
