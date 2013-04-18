@@ -4,32 +4,32 @@
 	<title>Justin.tv API Test</title>
 </head>
 <body>
-
+  <!-- the code for the player -->
 	<object type="application/x-shockwave-flash" 
         height="400" 
         width="620" 
         id="live_embed_player_flash" 
         data="http://www.twitch.tv/widgets/live_embed_player.swf?channel=DanDinh" 
         bgcolor="#000000">
-  <param  name="allowFullScreen" 
-          value="true" />
-  <param  name="allowScriptAccess" 
-          value="always" />
-  <param  name="allowNetworking" 
-          value="all" />
-  <param  name="movie" 
-          value="http://www.twitch.tv/widgets/live_embed_player.swf" />
-  <param  name="flashvars" 
-          value="hostname=www.twitch.tv&channel=DanDinh&auto_play=true&start_volume=50" />
-</object>
-
-<iframe frameborder="0" 
-        scrolling="no" 
-        id="chat_embed" 
-        src="http://twitch.tv/chat/embed?channel=DanDinh&amp;popout_chat=true" 
-        height="400" 
-        width="400">
-</iframe>
+    <param  name="allowFullScreen" 
+            value="true" />
+    <param  name="allowScriptAccess" 
+            value="always" />
+    <param  name="allowNetworking" 
+            value="all" />
+    <param  name="movie" 
+            value="http://www.twitch.tv/widgets/live_embed_player.swf" />
+    <param  name="flashvars" 
+            value="hostname=www.twitch.tv&channel=DanDinh&auto_play=true&start_volume=50" />
+  </object>
+  <!-- the code for the chat -->
+  <iframe frameborder="0" 
+          scrolling="no" 
+          id="chat_embed" 
+          src="http://twitch.tv/chat/embed?channel=DanDinh&amp;popout_chat=true" 
+          height="400" 
+          width="400">
+  </iframe>
 
 </body>
 </html>

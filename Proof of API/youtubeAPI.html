@@ -16,23 +16,26 @@
                 var videos = document.getElementById('videos');
                 $.ajax({
                 type: "GET",
+                //the username of the youtube account
                 url: "https://gdata.youtube.com/feeds/api/users/romion34/uploads",
                 dataType: "json",
+                //switch it to json instead of xml
                 data: {alt: 'json'},
                 success: function(response) {
+                        //loop through all of the entries which are the videos
                         for(var i=0; i < response.feed.entry.length; i++){
-                                console.log(response.feed.entry[i].id.$t);
 
+                                //the full url we are going to split
                                 var url      = response.feed.entry[i].id.$t,
+                                        //the part that we are getting rid of
                                         parts    = url.toString().split("http://gdata.youtube.com/feeds/api/videos/"),
-                                        video_id = parts[1].toString();
-
-                                console.log('video_id', video_id);
-
-                                console.log("http://youtube.com/embed/"+video_id);
-
-                                var video = document.createElement("ytplayer");
+                                        //the video id that I will need so I can embed it into the iframe
+                                        video_id = parts[1].toString(),
+                                        //creates the div for the iframe and youtube player
+                                        video = document.createElement("ytplayer");
+                                //add the frame and the video that will be shown
                                 video.innerHTML='<iframe id="player" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/'+video_id+'?enablejsapi=1" frameborder="0"></iframe>';
+                                //add it to the videos div
                                 videos.appendChild(video);
                         }
                 },
