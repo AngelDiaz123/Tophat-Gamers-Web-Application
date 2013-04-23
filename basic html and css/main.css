@@ -36,13 +36,29 @@ body {
 	background-color: #424242;
 }
 
+.top {
+	overflow: hidden;
+	height: 110px;
+	margin: 0;
+	padding: 0;
+	background-color: #424242;
+}
+
 .logo {
 	margin-left: 250px;
 	margin-top: 10px;
 	float: left;
 	position: absolute;
-	width: 50`px;
+	width: 50px;
 	height: 80px;
+}
+
+.top_logo {
+	margin-left: 200px;
+	float: left;
+	position: absolute;
+	width: 70px;
+	height: 100px;
 }
 
 #home_header h1 {
@@ -77,13 +93,43 @@ body {
 	height: 40px;
 }
 
+.top_register_link {
+	float: right;
+	color: white;
+	margin-right: -180px;
+	margin-top: 45px;
+	font-size: 1.2em;
+	text-decoration: none;
+}
+
 .register_link {
+	margin-bottom: 20px;
+	margin-right: -170px;
 	float: right;
 	color: white;
 	margin-top: 45px;
-	margin-right: -175px;
 	font-size: 1.2em;
 	text-decoration: none;
+}
+
+.top_login_button {
+	float: right;
+	margin-right: 400px;
+	margin-top: 40px;
+	background: #ea3200; /* Old browsers */
+	background: -moz-linear-gradient(top, #ea3200 0%, #ef5929 48%, #ea3200 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ea3200), color-stop(48%,#ef5929), color-stop(100%,#ea3200)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea3200', endColorstr='#ea3200',GradientType=0 ); /* IE6-9 */
+	border-style: none;
+	border-radius: 15px;
+	color: white;
+	font-size: .85em;
+	width: 70px;
+	height: 30px;
 }
 
 .login_button {
@@ -104,6 +150,10 @@ body {
 	font-size: .85em;
 	width: 70px;
 	height: 30px;
+}
+
+.logo_link {
+	margin-bottom: 20px;
 }
 
 .search_button {
@@ -133,6 +183,15 @@ body {
 	background-color: #ef5929;
 }
 
+.top_banner {
+	float: left;
+	position: absolute;
+	margin-top: -5px;
+	width: 100%;
+	height: 5px;
+	background-color: #ef5929;
+}
+
 #background_img_home{
 	width: 100%;
 	height: 400px;
@@ -153,7 +212,7 @@ body {
 	height: 170px;
 	width: 170px;
 	border-radius: 50%;
-	background-color: #7e5454;
+	background-color: #AF7A69;
 }
 
 .group_img {
@@ -195,7 +254,132 @@ body {
 	margin-top: 85px;
 }
 
+.search_div {
+	font-family: 'Open Sans', sans-serif;
+	padding-top: 10px;
+	margin-top: 20px;
+	border-radius: 15px;
+	width: 960px;
+	margin-left: 200px;
+	background-color: #AF7A69;
+}
+
+.main_input {
+	margin-top: 15px;
+	margin-bottom: 25px;
+	font-size: 1em;
+	width: 900px;
+	margin-left: 30px;
+	height: 30px;
+	border-radius: 15px;
+	border-style: none;
+}
+
+.main_search_button {
+	color: white;
+	background: #ea3200; /* Old browsers */
+	background: -moz-linear-gradient(top, #ea3200 0%, #ef5929 48%, #ea3200 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ea3200), color-stop(48%,#ef5929), color-stop(100%,#ea3200)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea3200', endColorstr='#ea3200',GradientType=0 ); /* IE6-9 */
+	border-radius: 15px;
+	font-size: 1.2em;
+	border: none;
+	width: 150px;
+	height: 40px;
+	margin-left: 145px;
+}
+
+.search_text {
+	color: white;
+	font-size: 1.1em;
+	padding: 0;
+	margin: 0;
+	margin-left: 30px;
+}
+
+.search_drop {
+	color: white;
+	font-size: 1.1em;
+	padding: 0;
+	margin: 0;
+	margin-left: 30px;
+}
+
+.search_header {
+	font-size: 2em;
+	font-family: 'Didact Gothic', sans-serif;
+	text-shadow: none;
+	color: white;
+	margin-left: 30px;
+}
+
+.main_dropdown {
+	margin-top: 15px;
+	margin-bottom: 40px;
+	height: 30px;
+	font-size: 1.2em;
+	margin-left: 30px;
+	width: 600px;
+	border-style: none;
+}
+
+.results_title {
+	color: white;
+	margin-top: 50px;
+	width: 960px;
+	margin-left: 200px;
+}
+
+.result_div {
+	overflow: hidden;
+	margin-left: 200px;
+	width: 960px;
+	border-radius: 15px;
+	border:2px solid white;
+}
+
+.search_result {
+	margin-top: 30px;
+	margin-left: 80px;
+	margin-bottom: 30px;
+	float: left;
+	width: 350px;
+	height: 100px;
+	border-radius: 15px;
+	background-color: #ea3200;
+}
+
+.basic_profile {
+	margin-top: 10px;
+	margin-left: 15px;
+}
+
+.username {
+	color: white;
+	margin-right: 175px;
+	float: right;
+}
+
+.gametype {
+	color: white;
+	margin-top: -30px;
+	margin-right: 170px;
+	float: right;
+
+}
+
 .footer_banner {
+	width: 100%;
+	height: 5px;
+	background-color: #ef5929;
+}
+
+.all_footer_banner {
+	margin-top: 50px;
 	width: 100%;
 	height: 5px;
 	background-color: #ef5929;
