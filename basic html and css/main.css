@@ -30,6 +30,45 @@ body {
 	padding: 0;
 }
 
+/*------ global Nav ---------------*/
+.top_login_button {
+	float: right;
+	margin-right: 400px;
+	margin-top: 40px;
+	background: #ea3200; /* Old browsers */
+	background: -moz-linear-gradient(top, #ea3200 0%, #ef5929 48%, #ea3200 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ea3200), color-stop(48%,#ef5929), color-stop(100%,#ea3200)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea3200', endColorstr='#ea3200',GradientType=0 ); /* IE6-9 */
+	border-style: none;
+	border-radius: 15px;
+	color: white;
+	font-size: .85em;
+	width: 70px;
+	height: 30px;
+}
+
+.top_logo {
+	margin-left: 200px;
+	float: left;
+	position: absolute;
+	width: 70px;
+	height: 100px;
+}
+
+.top_register_link {
+	float: right;
+	color: white;
+	margin-right: -180px;
+	margin-top: 45px;
+	font-size: 1.2em;
+	text-decoration: none;
+}
+
+/*----- Home Page ------------*/
 #home_header {
 	margin: 0;
 	padding: 0;
@@ -51,14 +90,6 @@ body {
 	position: absolute;
 	width: 50px;
 	height: 80px;
-}
-
-.top_logo {
-	margin-left: 200px;
-	float: left;
-	position: absolute;
-	width: 70px;
-	height: 100px;
 }
 
 #home_header h1 {
@@ -93,15 +124,6 @@ body {
 	height: 40px;
 }
 
-.top_register_link {
-	float: right;
-	color: white;
-	margin-right: -180px;
-	margin-top: 45px;
-	font-size: 1.2em;
-	text-decoration: none;
-}
-
 .register_link {
 	margin-bottom: 20px;
 	margin-right: -170px;
@@ -110,26 +132,6 @@ body {
 	margin-top: 45px;
 	font-size: 1.2em;
 	text-decoration: none;
-}
-
-.top_login_button {
-	float: right;
-	margin-right: 400px;
-	margin-top: 40px;
-	background: #ea3200; /* Old browsers */
-	background: -moz-linear-gradient(top, #ea3200 0%, #ef5929 48%, #ea3200 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ea3200), color-stop(48%,#ef5929), color-stop(100%,#ea3200)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* IE10+ */
-	background: linear-gradient(to bottom, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea3200', endColorstr='#ea3200',GradientType=0 ); /* IE6-9 */
-	border-style: none;
-	border-radius: 15px;
-	color: white;
-	font-size: .85em;
-	width: 70px;
-	height: 30px;
 }
 
 .login_button {
@@ -254,8 +256,16 @@ body {
 	margin-top: 85px;
 }
 
+.footer_banner {
+	width: 100%;
+	height: 5px;
+	background-color: #ef5929;
+}
+
+/*-------- Search Page -----------------*/
 .search_div {
 	font-family: 'Open Sans', sans-serif;
+	box-shadow:  -5px 5px 15px #3d3d3d, 5px 5px 15px #3d3d3d;
 	padding-top: 10px;
 	margin-top: 20px;
 	border-radius: 15px;
@@ -372,12 +382,112 @@ body {
 
 }
 
-.footer_banner {
-	width: 100%;
-	height: 5px;
-	background-color: #ef5929;
+/*---------- Profile Page ----------------*/
+.profile_div {
+	font-family: 'Open Sans', sans-serif;
+	box-shadow:  -5px 5px 15px #3d3d3d, 5px 5px 15px #3d3d3d;
+	line-height: 1.4em;
+	color: white;
+	width: 960px;
+	margin-left: 200px;
+	margin-top: 50px;
+	background-color: #AF7A69;
+	border-radius: 15px;
 }
 
+.tabs {
+	float: left;
+	margin-left: 200px;
+	margin-top: 30px;
+}
+
+.profile_img {
+	margin-left: 20px;
+	margin-top: 20px;
+	float: left;
+	width: 250px;
+	height: 250px;
+}
+
+.profile_buttons {
+	float: right;
+}
+
+.profile_buttons button {
+	margin-top: 35px;
+	margin-right: 35px;
+	color: white;
+	border-radius: 15px;
+	font-size: 1.2em;
+	border: none;
+	width: 150px;
+	height: 40px;
+	float: right;
+	clear: right;
+}
+
+.message {
+	background: #ea3200; /* Old browsers */
+	background: -moz-linear-gradient(top, #ea3200 0%, #ef5929 48%, #ea3200 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ea3200), color-stop(48%,#ef5929), color-stop(100%,#ea3200)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea3200', endColorstr='#ea3200',GradientType=0 ); /* IE6-9 */
+}
+
+.stream {
+	background: #3a3a3a; /* Old browsers */
+	background: -moz-linear-gradient(top, #3a3a3a 0%, #727272 50%, #3a3a3a 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3a3a3a), color-stop(50%,#727272), color-stop(100%,#3a3a3a)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #3a3a3a 0%,#727272 50%,#3a3a3a 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #3a3a3a 0%,#727272 50%,#3a3a3a 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #3a3a3a 0%,#727272 50%,#3a3a3a 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #3a3a3a 0%,#727272 50%,#3a3a3a 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a3a3a', endColorstr='#3a3a3a',GradientType=0 ); /* IE6-9 */
+}
+
+.title {
+	font-family: 'Didact Gothic', sans-serif;
+	margin: 0;
+	padding: 0;
+	float: left;
+	font-size: 1.5em;
+	margin-top: 50px;
+	margin-left: 10px;
+	width: 400px;
+}
+
+.info {
+	float: left;
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+	margin-left: 10px;
+	margin-top: 10px;
+	width: 400px;
+}
+
+.bio_title {
+	font-family: 'Didact Gothic', sans-serif;
+	font-size: 1.5em;
+	width: 800px;
+	margin-left: 20px;
+	padding-top: 30px;
+	padding-bottom: 5px;
+	clear: both;
+	overflow: hidden;
+}
+
+.bio {
+	width: 860px;
+	margin-left: 20px;
+	padding-bottom: 50px;
+	overflow: hidden;
+}
+
+/*------------- Global Footer ------------*/
 .all_footer_banner {
 	margin-top: 50px;
 	width: 100%;
