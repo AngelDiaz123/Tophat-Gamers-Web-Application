@@ -201,7 +201,7 @@ body {
 
 #home_content {
 	box-shadow:  -5px 5px 15px #3d3d3d, 5px 5px 15px #3d3d3d;
-	margin-left: 200px;
+	margin: 0 auto;
 	padding: 0;
 	background-color: white;
 	width: 960px;
@@ -267,10 +267,10 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	box-shadow:  -5px 5px 15px #3d3d3d, 5px 5px 15px #3d3d3d;
 	padding-top: 10px;
+	margin: 0 auto;
 	margin-top: 20px;
 	border-radius: 15px;
 	width: 960px;
-	margin-left: 200px;
 	background-color: #AF7A69;
 }
 
@@ -341,15 +341,13 @@ body {
 	color: white;
 	margin-top: 50px;
 	width: 960px;
-	margin-left: 200px;
+	margin-left: 100px;
 }
 
 .result_div {
 	overflow: hidden;
-	margin-left: 200px;
-	width: 960px;
-	border-radius: 15px;
-	border:2px solid white;
+	margin: 0 auto;
+	width: 1400px;
 }
 
 .search_result {
@@ -385,13 +383,11 @@ body {
 /*---------- Profile Page ----------------*/
 .profile_div {
 	font-family: 'Open Sans', sans-serif;
-	box-shadow:  -5px 5px 15px #3d3d3d, 5px 5px 15px #3d3d3d;
 	line-height: 1.4em;
 	color: white;
 	width: 960px;
-	margin-left: 200px;
+	margin: 0 auto;
 	margin-top: 50px;
-	background-color: #AF7A69;
 	border-radius: 15px;
 }
 
@@ -454,8 +450,8 @@ body {
 	padding: 0;
 	float: left;
 	font-size: 1.5em;
-	margin-top: 50px;
-	margin-left: 10px;
+	margin-top: 30px;
+	margin-left: 20px;
 	width: 400px;
 }
 
@@ -464,8 +460,8 @@ body {
 	font-size: 1em;
 	margin: 0;
 	padding: 0;
-	margin-left: 10px;
-	margin-top: 10px;
+	margin-left: 20px;
+	margin-top: 15px;
 	width: 400px;
 }
 
@@ -539,7 +535,6 @@ body {
 /*------------- Stream Page --------------*/
 .stream_div {
 	border-radius: 15px;
-	background-color: #AF7A69;
 	margin: 0 auto;
 	width: 1100px;
 	height: 650px;
