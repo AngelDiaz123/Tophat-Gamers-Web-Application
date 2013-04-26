@@ -487,8 +487,96 @@ body {
 	overflow: hidden;
 }
 
+/*------------- Contact Us Page ----------*/
+.contact_div {
+	font-size: 1.2em;
+	margin: 0 auto;
+	color: white;
+	width: 600px;
+	overflow: hidden;
+}
+
+.contact_header {
+	font-size: 2.0em;
+	margin-bottom: 40px;
+}
+
+.contact_one_linner {
+	width: 570px;
+}
+
+.contact_div form {
+	margin-top: 50px;
+}
+
+.contact_div form select {
+	width: 500px;
+}
+
+.contact_div form textarea {
+	resize: none;
+	margin-bottom: 20px;
+}
+
+.contact_submit {
+	color: white;
+	background: #ea3200; /* Old browsers */
+	background: -moz-linear-gradient(top, #ea3200 0%, #ef5929 48%, #ea3200 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ea3200), color-stop(48%,#ef5929), color-stop(100%,#ea3200)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea3200', endColorstr='#ea3200',GradientType=0 ); /* IE6-9 */
+	float: right;
+	border-radius: 15px;
+	border: none;
+	font-size: .75em;
+	width: 100px;
+	margin-right: 85px;
+}
+
+/*------------- Stream Page --------------*/
+.stream_div {
+	border-radius: 15px;
+	background-color: #AF7A69;
+	margin: 0 auto;
+	width: 1100px;
+	height: 650px;
+}
+
+.user_title {
+	padding-top: 20px;
+	margin-left: 20px;
+	color: white;
+	font-size: 2.0em;
+}
+
+.stream_video {
+	margin-left: 20px;
+	overflow: hidden;
+	float: left;
+	margin-right: 50px;
+}
+
+.stream_chat {
+	overflow: hidden;
+	float: right;
+	margin-right: 20px;
+}
+
+.stream_descript {
+	margin-left: 20px;
+	width: 950px;
+	color: white;
+	padding-top: 50px;
+	margin-bottom: 50px;
+	clear: both;
+}
+
 /*------------- Global Footer ------------*/
 .all_footer_banner {
+	clear: both;
 	margin-top: 50px;
 	width: 100%;
 	height: 5px;
