@@ -5,6 +5,7 @@
 	<link href="favicon.ico" rel="icon" type="image/x-icon" />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Didact+Gothic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('/css/main.css') ?>">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 </head>
 <body>
 	<div class="top">
@@ -86,6 +87,23 @@
 			<p class="gametype">Game Type</p>
 		</div>
 	</section>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$('.main_search_button').click(function(){
+				$(".result_div").html('');
+				$(".result_div").html('<div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div><div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div><div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div><div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div><div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div><div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div><div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div><div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div><div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div><div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div><div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div><div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div><div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div><div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div>');
+			});
+
+			$('.search_result').click(function(){
+				$(".results_title").html('');
+				$(".result_div").html('');
+				$(".result_div").html('<section class="profile_div"><div class="profile_buttons"><button class="message">Message</button><button class="stream">Watch Stream</button><button>Follow</button></div><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="profile_img"><p class="title">Username</p><p class="info">General Mustacho</p><p class="title">Game Type</p><p class="info">RPG, MMO, FPS </p><p class="bio_title">Player Biography</p><p class="bio">Born and raised in the military,  he knew he was meant to play video games from a young age.  He was always glued to the television and has always had a vivid imagination.  He spent his free time makeing up his own worlds and playing inside them.  He was a gamer.  He grew a beard at the age of 3 and was able to bench press buses since 4.  He was a manly gamer.</br></br>I like to play first-person shooter because of the action that happens in the game.  Role playing games interest me as well because it lets my imagination run wild and lets me be whoever I want to be. Come and join me in my games so we can play together and have fun.</p></section>');
+			});
+
+		});
+	</script>
 
 	<div class="all_footer_banner"></div>
 	<div class="footer_background">
