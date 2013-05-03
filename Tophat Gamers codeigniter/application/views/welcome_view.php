@@ -4,27 +4,34 @@
 	<title>Welcome to Tophat Gamers</title>
 	<link href="<?php echo base_url('images/favicon.ico') ?>" rel="icon" type="image/x-icon" />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Didact+Gothic' rel='stylesheet' type='text/css'>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/main.css') ?>">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="<?php echo base_url('magnific-popup/jquery.magnific-popup.js'); ?>"></script>
+	<script src="<?php echo base_url('toast/jquery.toastmessage.js'); ?>"></script>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('magnific-popup/magnific-popup.css'); ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/jquery.toastmessage.css'); ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/main.css'); ?>">
 </head>
 <body>
 	<div id="home_header">
 		<img src='<?php echo base_url("images/tophatGamers.png") ?>' class="logo">
 		<h1>A site for gamers by gamers. Start searching now.</h1>
 		<div id="login_form" style="color:white;">
-			<?php echo validation_errors(); ?>
-			<?php echo form_open('verifylogin'); ?>
-			    <label for="username">Username:</label>
-			    <input type="text" size="20" id="username" name="username">
-			    <br/>
-			    <label for="password">Password:</label>
-			    <input type="password" size="20" id="password" name="password">
-			    <br/>
-			    <input type="submit" value="Login">
+			<?php
+				$attributes = array('id'=>'login','class'=>'white-popup-block','class'=>'mfp-hide'); 
+				echo form_open('verifylogin',$attributes); ?>
+				<div class="login_form_div">
+				    <label for="username">Username:</label>
+				    <input type="text" size="20" id="username" name="username">
+				    <br/>
+				    <label for="password">Password:</label>
+				    <input type="password" size="20" id="password" name="password">
+				    <br/>
+				    <input type="submit" value="Login">
+				</div>
 			</form>
 		</div>
 		<header>
-			<button class="login_button">Log In</button>
+			<a class="popup_login" href="#login"><button class="login_button">Log In</button></a>
 			<a href="<?php echo base_url('register'); ?>" class="register_link">Register</a>
 			<?php
 				$attributes = array("class"=>'search_form');
@@ -33,7 +40,7 @@
 				<input type="submit" class="search_button" value="SEARCH">
 			</form>
 		</header>
-		<img src="<?php echo base_url('images/controllers.jpg') ?>" id="background_img_home">
+		<img src="<?php echo base_url('images/controllers.jpg'); ?>" id="background_img_home">
 	</div>
 	<div class="home_banner"></div>
 
@@ -62,12 +69,12 @@
 		</footer>
 	</div>
 
-	<script type="text/javascript">
+	<script>
 		$(document).ready(function(){
-			/*$('#login_form').hide();
-			$('.login_button').click(function(){
-				$('#login_form').show();
-			});*/
+			$('.popup_login').magnificPopup({ 
+			  type: 'inline'
+				// other options
+			});
 		});
 	</script>
 </body>

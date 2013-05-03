@@ -75,6 +75,13 @@ body {
 	background-color: #424242;
 }
 
+.login_form_div {
+	padding: 10px;
+	background-color: grey;
+	width: 300px;
+	margin: 0 auto;
+}
+
 .top {
 	overflow: hidden;
 	height: 110px;
