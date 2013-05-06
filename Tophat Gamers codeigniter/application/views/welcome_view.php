@@ -15,7 +15,7 @@
 	<div id="home_header">
 		<img src='<?php echo base_url("images/tophatGamers.png") ?>' class="logo">
 		<h1>A site for gamers by gamers. Start searching now.</h1>
-		<div id="login_form" style="color:white;">
+		<div class="login_form" style="color:white;">
 			<?php
 				$attributes = array('id'=>'login','class'=>'white-popup-block','class'=>'mfp-hide'); 
 				echo form_open('verifylogin',$attributes); ?>
@@ -35,7 +35,7 @@
 			<a href="<?php echo base_url('register'); ?>" class="register_link">Register</a>
 			<?php
 				$attributes = array("class"=>'search_form');
-				echo form_open('search', $attributes); ?>
+				echo form_open('searchHome', $attributes); ?>
 				<input type="text" name="search_input" id="search_input" class="search_input" value="Ex. JohnDoe or JohnDoe@email.com">
 				<input type="submit" class="search_button" value="SEARCH">
 			</form>

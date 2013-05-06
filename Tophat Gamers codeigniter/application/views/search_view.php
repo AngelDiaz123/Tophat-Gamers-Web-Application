@@ -33,6 +33,7 @@
 			<input type="button" value="SEARCH" class="main_search_button">
 		</form>
 	</section>
+	<?php var_dump($info); ?>
 
 	<h1 class="results_title">Search Results</h1>
 	<section class="result_div">
