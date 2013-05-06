@@ -381,15 +381,15 @@ body {
 }
 
 .username {
+	width: 240px;
 	color: white;
-	margin-right: 175px;
 	float: right;
 }
 
 .gametype {
+	width: 240px;
 	color: white;
 	margin-top: -30px;
-	margin-right: 170px;
 	float: right;
 
 }

@@ -33,60 +33,22 @@
 			<input type="button" value="SEARCH" class="main_search_button">
 		</form>
 	</section>
-	<?php var_dump($info); ?>
 
 	<h1 class="results_title">Search Results</h1>
 	<section class="result_div">
-		<div class="search_result">
-			<img src="<?php echo base_url('images/basic_profile.jpg') ?>" class="basic_profile">
-			<p class="username">Username</p>
-			<p class="gametype">Game Type</p>
-		</div>
-		<div class="search_result">
-			<img src="<?php echo base_url('images/basic_profile.jpg') ?>" class="basic_profile">
-			<p class="username">Username</p>
-			<p class="gametype">Game Type</p>
-		</div>
-		<div class="search_result">
-			<img src="<?php echo base_url('images/basic_profile.jpg') ?>" class="basic_profile">
-			<p class="username">Username</p>
-			<p class="gametype">Game Type</p>
-		</div>
-		<div class="search_result">
-			<img src="<?php echo base_url('images/basic_profile.jpg') ?>" class="basic_profile">
-			<p class="username">Username</p>
-			<p class="gametype">Game Type</p>
-		</div>
-		<div class="search_result">
-			<img src="<?php echo base_url('images/basic_profile.jpg') ?>" class="basic_profile">
-			<p class="username">Username</p>
-			<p class="gametype">Game Type</p>
-		</div>
-		<div class="search_result">
-			<img src="<?php echo base_url('images/basic_profile.jpg') ?>" class="basic_profile">
-			<p class="username">Username</p>
-			<p class="gametype">Game Type</p>
-		</div>
-		<div class="search_result">
-			<img src="<?php echo base_url('images/basic_profile.jpg') ?>" class="basic_profile">
-			<p class="username">Username</p>
-			<p class="gametype">Game Type</p>
-		</div>
-		<div class="search_result">
-			<img src="<?php echo base_url('images/basic_profile.jpg') ?>" class="basic_profile">
-			<p class="username">Username</p>
-			<p class="gametype">Game Type</p>
-		</div>
-		<div class="search_result">
-			<img src="<?php echo base_url('images/basic_profile.jpg') ?>" class="basic_profile">
-			<p class="username">Username</p>
-			<p class="gametype">Game Type</p>
-		</div>
-		<div class="search_result">
-			<img src="<?php echo base_url('images/basic_profile.jpg') ?>" class="basic_profile">
-			<p class="username">Username</p>
-			<p class="gametype">Game Type</p>
-		</div>
+		<?php 
+			//loops through all of the data from the controller
+			foreach ($info as $item) {
+				//stores each object of the data into a new array
+				?>
+				<div class="search_result">
+					<img src="<?php echo base_url("$item[user_img]"); ?>" class="basic_profile">
+					<p class="username"><?php echo $item['username']; ?></p>
+					<p class="gametype"><?php echo $item['bio']; ?></p>
+				</div>
+				<?php
+			}
+		?>
 	</section>
 
 	<script type="text/javascript">
