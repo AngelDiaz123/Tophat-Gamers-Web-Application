@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class="top">
-		<a href="<?php echo base_url('index.php/search'); ?>" class="logo_link"><img src="<?php echo base_url('images/tophatGamers.png') ?>" class="top_logo"></a>
+		<a href=" <?php echo base_url('index.php/search'); ?>" class="logo_link"><img src=" <?php echo base_url('images/tophatGamers.png') ?>" class="top_logo"></a>
 		<header>
 			<button class="top_login_button">Log In</button>
 			<a href="#" class="top_register_link">Register</a>
@@ -44,7 +44,7 @@
 				<div class="search_result">
 					<img src="<?php echo base_url("$item[user_img]"); ?>" class="basic_profile">
 					<p class="username"><?php echo $item['username']; ?></p>
-					<p class="gametype"><?php echo $item['bio']; ?></p>
+					<p class="gametype"><?php echo $item['gametype']; ?></p>
 				</div>
 				<?php
 			}
