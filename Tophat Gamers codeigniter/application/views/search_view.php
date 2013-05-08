@@ -44,6 +44,7 @@
 				<div class="search_result">
 					<img src="<?php echo base_url("$item[user_img]"); ?>" class="basic_profile">
 					<p class="username"><?php echo $item['username']; ?></p>
+					<p class="uID"><?php echo $item['user_id']; ?></p>
 					<p class="gametype"><?php echo $item['gametype']; ?></p>
 				</div>
 				<?php
@@ -54,15 +55,46 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 
+			$('.uID').hide();
+
 			$('.main_search_button').click(function(){
-				$(".result_div").html('');
-				$(".result_div").html('<div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div><div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div><div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div><div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div><div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div><div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div><div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div><div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div><div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div><div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div><div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div><div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div><div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div><div class="search_result"><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="basic_profile"><p class="username">Username</p><p class="gametype">Game Type</p></div>');
+				//$(".result_div").html('');
 			});
 
 			$('.search_result').click(function(){
-				$(".results_title").html('');
-				$(".result_div").html('');
-				$(".result_div").html('<section class="profile_div"><div class="profile_buttons"><button class="message">Message</button><a href="<?php echo base_url("index.php/stream"); ?>" target="_blank"><button class="stream">Watch Stream</button></a><button>Follow</button></div><img src="<?php echo base_url("images/basic_profile.jpg") ?>" class="profile_img"><p class="title">Username</p><p class="info">General Mustacho</p><p class="title">Game Type</p><p class="info">RPG, MMO, FPS </p><p class="bio_title">Player Biography</p><p class="bio">Born and raised in the military,  he knew he was meant to play video games from a young age.  He was always glued to the television and has always had a vivid imagination.  He spent his free time makeing up his own worlds and playing inside them.  He was a gamer.  He grew a beard at the age of 3 and was able to bench press buses since 4.  He was a manly gamer.</br></br>I like to play first-person shooter because of the action that happens in the game.  Role playing games interest me as well because it lets my imagination run wild and lets me be whoever I want to be. Come and join me in my games so we can play together and have fun.</p></section>');
+				// get the value from the username field                              
+			    var userId = $(this).children('.uID').text();
+			    //console.log($(this).children('.uID').text());
+			    
+			    // Ajax request sent to the CodeIgniter controller "ajax" method "username_taken"
+			    // post the username field's value
+				$.ajax({
+					url: "<?php echo base_url('index.php/retrieve/ajax'); ?>",
+					type: 'POST',
+					dataType: 'json',
+					data: {
+						'userID': $(this).children('.uID').text(),
+					},
+					success: function(result) {
+						console.log(result.username);
+						$(".results_title").html('');
+						$(".result_div").html('');
+						$(".result_div").html('<section class="profile_div">'+
+												'<div class="profile_buttons">'+
+													'<button class="message">Message</button>'+
+													'<a href="<?php echo base_url("index.php/stream"); ?>" target="_blank"><button class="stream">Watch Stream</button></a>'+
+													'<button>Follow</button>'+
+												'</div>'+
+												'<img src="<?php echo base_url("'+result.user_img+'"); ?>" class="profile_img">'+
+												'<p class="title">Username</p>'+
+												'<p class="info">'+result.username+'</p><p class="title">Game Type</p>'+
+												'<p class="info">'+result.gametype+'</p><p class="bio_title">Player Biography</p>'+
+												'<p class="bio">'+result.bio+'</p>'+
+											'</section>');
+
+
+					}
+				});
 			});
 
 		});

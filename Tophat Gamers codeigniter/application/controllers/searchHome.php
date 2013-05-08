@@ -13,7 +13,7 @@ class searchHome extends CI_Controller {
 
     $this->form_validation->set_rules('search_input', 'Username', 'trim|required');
     $info = $this->searchModel->search();
-    $data = array('info'=>$info);
+    $data = array('info' => $info);
     $this->load->view('search_view',$data);
 
  }
