@@ -13,7 +13,7 @@
       return $query->result_array();
     }
 
-    function searchUser($username){
+    function searchUser($user){
 
       $this->db->select('username, users.user_id');
       $this->db->from('users');
@@ -21,12 +21,27 @@
       $this->db->select('user_img');
       $this->db->join('gametype','profile.user_id = gametype.user_id');
       $this->db->select('gametype');
-      $this->db->where('username',$username);
+      $this->db->where('username',$user);
 
 
       $query = $this->db->get();
       return $query->result_array();
-    }    
+    } 
+
+    function searchEmail($email){
+
+      $this->db->select('username,email, users.user_id');
+      $this->db->from('users');
+      $this->db->join('profile','users.user_id = profile.user_id');
+      $this->db->select('user_img');
+      $this->db->join('gametype','profile.user_id = gametype.user_id');
+      $this->db->select('gametype');
+      $this->db->where('email',$email);
+
+
+      $query = $this->db->get();
+      return $query->result_array();
+    }   
 
     function retrieveUser($id){
       $this->db->select('username');
