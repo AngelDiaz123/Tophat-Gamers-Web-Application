@@ -13,6 +13,23 @@
       return $query->result_array();
     }
 
+    function searchBoth($user,$type){
+      //$where = "name='Joe' AND status='boss' OR status='active'";
+      $where = "username ='$user' AND gametype ='$type'";
+
+      $this->db->select('username, users.user_id');
+      $this->db->from('users');
+      $this->db->join('profile','users.user_id = profile.user_id');
+      $this->db->select('user_img');
+      $this->db->join('gametype','profile.user_id = gametype.user_id');
+      $this->db->select('gametype');
+      $this->db->where($where);
+
+
+      $query = $this->db->get();
+      return $query->result_array();
+    }
+
     function searchUser($user){
 
       $this->db->select('username, users.user_id');
@@ -26,7 +43,38 @@
 
       $query = $this->db->get();
       return $query->result_array();
+    }
+
+    function searchType($type){
+
+      $this->db->select('username, users.user_id');
+      $this->db->from('users');
+      $this->db->join('profile','users.user_id = profile.user_id');
+      $this->db->select('user_img');
+      $this->db->join('gametype','profile.user_id = gametype.user_id');
+      $this->db->select('gametype');
+      $this->db->where('gametype',$type);
+
+
+      $query = $this->db->get();
+      return $query->result_array();
     } 
+
+    function searchEmailAndType($email,$type){
+      $where = "email='$email' AND gametype='$type'";
+
+      $this->db->select('username,email, users.user_id');
+      $this->db->from('users');
+      $this->db->join('profile','users.user_id = profile.user_id');
+      $this->db->select('user_img');
+      $this->db->join('gametype','profile.user_id = gametype.user_id');
+      $this->db->select('gametype');
+      $this->db->where('email',$email);
+
+
+      $query = $this->db->get();
+      return $query->result_array();
+    }
 
     function searchEmail($email){
 

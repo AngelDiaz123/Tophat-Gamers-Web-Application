@@ -19,18 +19,18 @@
 
 	<section class="search_div">
 		<h1 class="search_header">Search For A Friend</h1>
-		<form action="#" method="GET">
+		<?php echo form_open('search'); ?>
 			<p class="search_text">Search By Username or Email</p>
-			<input type="input" class="main_input">
-			<p class="search_drop">Select a Gametype</p>
-			<select class="main_dropdown">
-				<option value="option1">option 1</option>
-				<option value="option2">option 2</option>
-				<option value="option3">option 3</option>
-				<option value="option4">option 4</option>
+			<input type="input" class="main_input" name="main_input" placeholder="Ex. John Doe or John@email.com">
+			<p class="search_drop">Gametype</p>
+			<select class="main_dropdown" name="main_dropdown">
+				<option value="">Select an Option</option>
+				<option value="FPS">FPS</option>
+				<option value="MMO">MMO</option>
+				<option value="Test">Test</option>
 			</select>
 
-			<input type="button" value="SEARCH" class="main_search_button">
+			<input type="submit" value="SEARCH" class="main_search_button">
 		</form>
 	</section>
 
@@ -64,9 +64,7 @@
 			$('.search_result').click(function(){
 				// get the value from the username field                              
 			    var userId = $(this).children('.uID').text();
-			    //console.log($(this).children('.uID').text());
-			    
-			    // Ajax request sent to the CodeIgniter controller "ajax" method "username_taken"
+
 			    // post the username field's value
 				$.ajax({
 					url: "<?php echo base_url('index.php/retrieve/ajax'); ?>",
@@ -92,18 +90,19 @@
 												'<p class="info">'+result.gametype+'</p><p class="bio_title">Player Biography</p>'+
 												'<p class="bio">'+result.bio+'</p>'+
 											'</section>');
+
 						$('.back_button').click(function(){
 							console.log('working');
-							/*$(".result_div").html('');
+							$(".result_div").html('');
 							$(".results_title").html('<h1 class="results_title">Search Results</h1>');
 							$(".result_div").html('<?php foreach ($info as $item) { ?>'+
 														'<div class="search_result">'+
 															'<img src="<?php echo base_url("$item[user_img]"); ?>" class="basic_profile">'+
 															'<p class="username"><?php echo $item["username"]; ?></p>'+
-															'<p class="uID"><?php echo $item["user_id"]; ?></p>'+
-															'<p class="gametype">'+'<?php echo$item["gametype"]; ?></p>'+
+															//'<p class="uID"><?php echo $item["user_id"]; ?></p>'+
+															//'<p class="gametype"><?php echo $item["gametype"]; ?>//</p>'+
 															'</div>'+
-													'<?php } ?>');*/
+													'<?php } ?>');
 						});
 
 
