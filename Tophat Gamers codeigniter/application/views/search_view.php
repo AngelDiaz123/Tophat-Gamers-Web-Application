@@ -80,6 +80,7 @@
 						$(".results_title").html('');
 						$(".result_div").html('');
 						$(".result_div").html('<section class="profile_div">'+
+												'<button class="back_button">Back</button>'+
 												'<div class="profile_buttons">'+
 													'<button class="message">Message</button>'+
 													'<a href="<?php echo base_url("index.php/stream"); ?>" target="_blank"><button class="stream">Watch Stream</button></a>'+
@@ -91,6 +92,19 @@
 												'<p class="info">'+result.gametype+'</p><p class="bio_title">Player Biography</p>'+
 												'<p class="bio">'+result.bio+'</p>'+
 											'</section>');
+						$('.back_button').click(function(){
+							console.log('working');
+							/*$(".result_div").html('');
+							$(".results_title").html('<h1 class="results_title">Search Results</h1>');
+							$(".result_div").html('<?php foreach ($info as $item) { ?>'+
+														'<div class="search_result">'+
+															'<img src="<?php echo base_url("$item[user_img]"); ?>" class="basic_profile">'+
+															'<p class="username"><?php echo $item["username"]; ?></p>'+
+															'<p class="uID"><?php echo $item["user_id"]; ?></p>'+
+															'<p class="gametype">'+'<?php echo$item["gametype"]; ?></p>'+
+															'</div>'+
+													'<?php } ?>');*/
+						});
 
 
 					}

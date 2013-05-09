@@ -36,7 +36,7 @@
 			<?php
 				$attributes = array("class"=>'search_form');
 				echo form_open('searchHome', $attributes); ?>
-				<input type="text" name="search_input" id="search_input" class="search_input" value="Ex. JohnDoe or JohnDoe@email.com">
+				<input type="text" name="search_input" id="search_input" class="search_input" placeholder="Ex. JohnDoe or JohnDoe@email.com">
 				<input type="submit" class="search_button" value="SEARCH">
 			</form>
 		</header>
@@ -75,6 +75,21 @@
 			  type: 'inline'
 				// other options
 			});
+
+			//just in case placeholder isnt working in the latest browser, this is back up
+			$('[placeholder]').focus(function() {
+			  var input = $(this);
+			  if (input.val() == input.attr('placeholder')) {
+			    input.val('');
+			    input.removeClass('placeholder');
+			  }
+			}).blur(function() {
+			  var input = $(this);
+			  if (input.val() == '' || input.val() == input.attr('placeholder')) {
+			    input.addClass('placeholder');
+			    input.val(input.attr('placeholder'));
+			  }
+			}).blur();
 		});
 	</script>
 </body>
