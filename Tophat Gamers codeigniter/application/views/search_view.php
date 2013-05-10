@@ -57,11 +57,6 @@
 
 			$('.uID').hide();
 
-			$('.popup_login').magnificPopup({ 
-			  type: 'inline'
-				// other options
-			});
-
 			//just in case placeholder isnt working in the latest browser, this is back up
 			$('[placeholder]').focus(function() {
 			  var input = $(this);

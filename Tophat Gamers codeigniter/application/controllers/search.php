@@ -34,7 +34,7 @@ class search extends CI_Controller {
       }
 
     // if username is empty and gametype isn't
-    }else if($user == '' || $user != 'Ex. JohnDoe or JohnDoe@email.com' && $type != ''){
+    }else if($user != 'Ex. JohnDoe or JohnDoe@email.com' && $type != ''){
 
       // search by gametype
       $info = $this->searchModel->searchType($type);
