@@ -57,6 +57,26 @@
 
 			$('.uID').hide();
 
+			$('.popup_login').magnificPopup({ 
+			  type: 'inline'
+				// other options
+			});
+
+			//just in case placeholder isnt working in the latest browser, this is back up
+			$('[placeholder]').focus(function() {
+			  var input = $(this);
+			  if (input.val() == input.attr('placeholder')) {
+			    input.val('');
+			    input.removeClass('placeholder');
+			  }
+			}).blur(function() {
+			  var input = $(this);
+			  if (input.val() == '' || input.val() == input.attr('placeholder')) {
+			    input.addClass('placeholder');
+			    input.val(input.attr('placeholder'));
+			  }
+			}).blur();
+
 			$('.search_result').click(function(){
 				// get the value from the username field                              
 			    var userId = $(this).children('.uID').text();

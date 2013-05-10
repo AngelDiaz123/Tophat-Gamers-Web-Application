@@ -16,7 +16,7 @@ class search extends CI_Controller {
     $this->form_validation->set_rules('search_input', 'Username or Email', 'trim');
 
     // if username and type is not empy
-    if($user != '' && $type != ''){
+    if($user != '' && $type != '' && $user != 'Ex. JohnDoe or JohnDoe@email.com'){
 
        if(strstr($user, '@')){
 
@@ -34,7 +34,7 @@ class search extends CI_Controller {
       }
 
     // if username is empty and gametype isn't
-    }else if($user == '' && $type != ''){
+    }else if($user == '' || $user != 'Ex. JohnDoe or JohnDoe@email.com' && $type != ''){
 
       // search by gametype
       $info = $this->searchModel->searchType($type);
@@ -42,7 +42,7 @@ class search extends CI_Controller {
       $this->load->view('search_view',$data);
 
     // search by username only
-    }else if($user != ''){
+    }else if($user != '' && $user != 'Ex. JohnDoe or JohnDoe@email.com'){
 
       if(strstr($user, '@')){
         $info = $this->searchModel->searchEmail($user);
