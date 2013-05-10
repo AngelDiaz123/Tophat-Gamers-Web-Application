@@ -13,7 +13,7 @@ class searchHome extends CI_Controller {
     $user = $this->input->post('search_input');
 
     $this->form_validation->set_rules('search_input', 'Username', 'trim');
-    if($user != ''){
+    if($user != '' && $user != 'Ex. JohnDoe or JohnDoe@email.com'){
       // to check to see if it's an email address
       if(strstr($user, '@')){
 
@@ -36,7 +36,7 @@ class searchHome extends CI_Controller {
       $info = $this->searchModel->search();
       $data = array('info' => $info);
       $this->load->view('search_view',$data);
-      
+
     }
 
  }

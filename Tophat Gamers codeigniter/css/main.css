@@ -291,6 +291,11 @@ body {
 	width: 960px;
 }
 
+.search_people {
+	margin-left: 20px;
+	width: 80px;
+}
+
 .main_input {
 	margin-top: 15px;
 	margin-bottom: 25px;

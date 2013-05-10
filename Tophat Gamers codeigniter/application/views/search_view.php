@@ -19,7 +19,7 @@
 
 	<!-- a search form for username or email or gametype -->
 	<section class="search_div">
-		<h1 class="search_header">Search For A Friend</h1>
+		<h1 class="search_header">Search For A Friend<img src="<?php echo base_url('images/people.png') ?>" class="search_people"></h1>
 		<?php echo form_open('search'); ?>
 			<p class="search_text">Search By Username or Email</p>
 			<input type="input" class="main_input" name="main_input" placeholder="Ex. John Doe or John@email.com">
