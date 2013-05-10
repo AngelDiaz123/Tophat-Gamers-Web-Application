@@ -17,6 +17,7 @@
 	</div>
 	<div class="top_banner"></div>
 
+	<!-- a search form for username or email or gametype -->
 	<section class="search_div">
 		<h1 class="search_header">Search For A Friend</h1>
 		<?php echo form_open('search'); ?>
@@ -38,9 +39,8 @@
 	<section class="result_div">
 		<?php 
 			//loops through all of the data from the controller
-			foreach ($info as $item) {
-				//stores each object of the data into a new array
-				?>
+			foreach ($info as $item) { ?>
+				<!-- goes through all of the items and pulls what it needs to display -->
 				<div class="search_result">
 					<img src="<?php echo base_url("$item[user_img]"); ?>" class="basic_profile">
 					<p class="username"><?php echo $item['username']; ?></p>
@@ -57,10 +57,6 @@
 
 			$('.uID').hide();
 
-			$('.main_search_button').click(function(){
-				//$(".result_div").html('');
-			});
-
 			$('.search_result').click(function(){
 				// get the value from the username field                              
 			    var userId = $(this).children('.uID').text();
@@ -74,9 +70,13 @@
 						'userID': $(this).children('.uID').text(),
 					},
 					success: function(result) {
-						console.log(result.username);
+						// to get rid of the search results title
 						$(".results_title").html('');
+
+						// to clear the result div
 						$(".result_div").html('');
+
+						// to display the profile after the ajax call was made
 						$(".result_div").html('<section class="profile_div">'+
 												'<button class="back_button">Back</button>'+
 												'<div class="profile_buttons">'+

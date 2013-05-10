@@ -1,5 +1,6 @@
 <?php
   Class searchModel extends CI_Model{
+    // a all around search
     function search(){
 
       $this->db->select('username, users.user_id');
@@ -13,8 +14,8 @@
       return $query->result_array();
     }
 
+    // a search by both username and gametype
     function searchBoth($user,$type){
-      //$where = "name='Joe' AND status='boss' OR status='active'";
       $where = "username ='$user' AND gametype ='$type'";
 
       $this->db->select('username, users.user_id');
@@ -30,6 +31,7 @@
       return $query->result_array();
     }
 
+    // a search by username
     function searchUser($user){
 
       $this->db->select('username, users.user_id');
@@ -45,6 +47,7 @@
       return $query->result_array();
     }
 
+    // a search by gametype
     function searchType($type){
 
       $this->db->select('username, users.user_id');
@@ -60,6 +63,7 @@
       return $query->result_array();
     } 
 
+    // a search by email address and gametype
     function searchEmailAndType($email,$type){
       $where = "email='$email' AND gametype='$type'";
 
@@ -76,6 +80,7 @@
       return $query->result_array();
     }
 
+    // a search by email address
     function searchEmail($email){
 
       $this->db->select('username,email, users.user_id');
@@ -91,6 +96,7 @@
       return $query->result_array();
     }   
 
+    // a ajax search for a profile
     function retrieveUser($id){
       $this->db->select('username');
       $this->db->from('users');

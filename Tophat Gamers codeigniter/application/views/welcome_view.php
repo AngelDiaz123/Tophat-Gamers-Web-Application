@@ -17,6 +17,7 @@
 		<h1>A site for gamers by gamers. Start searching now.</h1>
 		<div class="login_form" style="color:white;">
 			<?php
+				// hidden login form
 				$attributes = array('id'=>'login','class'=>'white-popup-block','class'=>'mfp-hide'); 
 				echo form_open('verifylogin',$attributes); ?>
 				<div class="login_form_div">
@@ -31,15 +32,18 @@
 			</form>
 		</div>
 		<header>
+			<!-- to display the hidden form -->
 			<a class="popup_login" href="#login"><button class="login_button">Log In</button></a>
 			<a href="<?php echo base_url('register'); ?>" class="register_link">Register</a>
 			<?php
+				// for the search form
 				$attributes = array("class"=>'search_form');
 				echo form_open('searchHome', $attributes); ?>
 				<input type="text" name="search_input" id="search_input" class="search_input" placeholder="Ex. JohnDoe or JohnDoe@email.com">
 				<input type="submit" class="search_button" value="SEARCH">
 			</form>
 		</header>
+		<!-- the subtle image in the background -->
 		<img src="<?php echo base_url('images/controllers.jpg'); ?>" id="background_img_home">
 	</div>
 
