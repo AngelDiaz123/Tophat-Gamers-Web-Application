@@ -8,6 +8,7 @@ class search extends CI_Controller {
  }
 
   function index(){
+
     //This method will have the credentials validation
     $this->load->library('form_validation');
     $user = $this->input->post('main_input');
@@ -29,9 +30,9 @@ class search extends CI_Controller {
         // to search by username and type
         $info = $this->searchModel->searchBoth($user,$type);
         $data = array('info' => $info);
-        $this->load->view('search_view',$data);
 
       }
+       $this->load->view('search_view',$data);
 
     // if username is empty and gametype isn't
     }else if($user != 'Ex. JohnDoe or JohnDoe@email.com' && $type != ''){
@@ -42,17 +43,21 @@ class search extends CI_Controller {
       $this->load->view('search_view',$data);
 
     // search by username only
-    }else if($user != '' && $user != 'Ex. JohnDoe or JohnDoe@email.com'){
-
+    }else if($user != '' && $user != 'Ex. JohnDoe or John@email.com'){
+      // to check to see if it's an email address
       if(strstr($user, '@')){
+
         $info = $this->searchModel->searchEmail($user);
         $data = array('info' => $info);
 
       }else{
+
+        // if not an email address
         $info = $this->searchModel->searchUser($user);
         $data = array('info' => $info);
       }
 
+      // to load the view and send the data
       $this->load->view('search_view',$data);
 
     }else{

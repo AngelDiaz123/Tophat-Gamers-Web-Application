@@ -22,7 +22,7 @@
 		<h1 class="search_header">Search For A Friend<img src="<?php echo base_url('images/people.png') ?>" class="search_people"></h1>
 		<?php echo form_open('search'); ?>
 			<p class="search_text">Search By Username or Email</p>
-			<input type="input" class="main_input" name="main_input" placeholder="Ex. John Doe or John@email.com">
+			<input type="input" class="main_input" name="main_input" placeholder="Ex. JohnDoe or John@email.com">
 			<p class="search_drop">Gametype</p>
 			<select class="main_dropdown" name="main_dropdown">
 				<option value="">Select an Option</option>
@@ -72,14 +72,14 @@
 			  }
 			}).blur();
 
-			$('.search_result').click(function(){
+			/*$('.search_result').click(function(){
 				// get the value from the username field                              
 			    var userId = $(this).children('.uID').text();
 
 			    // post the username field's value
 				$.ajax({
-					url: "<?php echo base_url('index.php/retrieve/ajax'); ?>",
-					type: 'POST',
+					url: "<?php echo base_url('index.php/retrieve/ajax/userID'); ?>",
+					type: 'GET',
 					dataType: 'json',
 					data: {
 						'userID': $(this).children('.uID').text(),
@@ -90,6 +90,8 @@
 
 						// to clear the result div
 						$(".result_div").html('');
+
+						<?php echo site_url('result.username'); ?>
 
 						// to display the profile after the ajax call was made
 						$(".result_div").html('<section class="profile_div">'+
@@ -123,7 +125,7 @@
 
 					}
 				});
-			});
+			});*/
 
 		});
 	</script>
