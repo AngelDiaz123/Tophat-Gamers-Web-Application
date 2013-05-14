@@ -76,7 +76,7 @@
 			  }
 			}).blur();
 
-			/*$('.search_result').click(function(){
+			$('.search_result').click(function(){
 				// get the value from the username field                              
 			    var userId = $(this).children('.uID').text();
 
@@ -112,7 +112,7 @@
 												'<p class="bio">'+result.bio+'</p>'+
 											'</section>');
 
-						$('.back_button').click(function(){
+						/*$('.back_button').click(function(){
 							console.log('working');
 							$(".result_div").html('');
 							$(".results_title").html('<h1 class="results_title">Search Results</h1>');
@@ -124,7 +124,7 @@
 															//'<p class="gametype"><?php echo $item["gametype"]; ?>//</p>'+
 															'</div>'+
 													'<?php } ?>');
-						});
+						});*/
 
 
 					}
