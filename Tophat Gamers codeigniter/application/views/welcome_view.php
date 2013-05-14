@@ -6,12 +6,11 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Didact+Gothic' rel='stylesheet' type='text/css'>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="<?php echo base_url('magnific-popup/jquery.magnific-popup.js'); ?>"></script>
-	<script src="<?php echo base_url('toast/jquery.toastmessage.js'); ?>"></script>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('magnific-popup/magnific-popup.css'); ?>">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/jquery.toastmessage.css'); ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/main.css'); ?>">
 </head>
 <body>
+
 	<div id="home_header">
 		<img src='<?php echo base_url("images/tophatGamers.png") ?>' class="logo">
 		<h1>A site for gamers by gamers. Start searching now.</h1>
@@ -43,6 +42,8 @@
 				<input type="submit" class="search_button" value="SEARCH">
 			</form>
 		</header>
+	</div>
+
 		<!-- the subtle image in the background -->
 		<img src="<?php echo base_url('images/controllers.jpg'); ?>" id="background_img_home">
 	</div>
@@ -73,8 +74,10 @@
 		</footer>
 	</div>
 
-	<script>
+	<script type="text/javascript">
+
 		$(document).ready(function(){
+
 			$('.popup_login').magnificPopup({ 
 			  type: 'inline'
 				// other options

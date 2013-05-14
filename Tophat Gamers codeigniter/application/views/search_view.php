@@ -57,6 +57,10 @@
 
 			$('.uID').hide();
 
+			$('.result_div').hide();
+
+			$('.result_div').fadeIn(3000);
+
 			//just in case placeholder isnt working in the latest browser, this is back up
 			$('[placeholder]').focus(function() {
 			  var input = $(this);
