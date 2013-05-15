@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class retrieve extends CI_Controller {
+class Profile extends CI_Controller {
 
   function __construct(){
     parent::__construct();
@@ -9,15 +9,12 @@ class retrieve extends CI_Controller {
   }
 
   function index(){
-    
+
  }
 
-  function ajax(){
-
-    $userID = trim($_GET['userID']);
+  function user($userID){
     $profile = $this->searchModel->retrieveUser($userID);
-
-    echo json_encode($profile);
+    var_dump($profile);
   }
 
 }

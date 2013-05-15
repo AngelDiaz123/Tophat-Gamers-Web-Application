@@ -12,7 +12,7 @@ class search extends CI_Controller {
     //This method will have the credentials validation
     $this->load->library('form_validation');
     $user = $this->input->get('q');
-    $type = $this->input->get('main_dropdown');
+    $type = $this->input->get('d');
 
     $this->form_validation->set_rules('search_input', 'Username or Email', 'trim');
 

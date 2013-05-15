@@ -42,7 +42,7 @@
 			<p class="search_text">Search By Username or Email</p>
 			<input type="input" class="main_input" name="q" placeholder="Ex. JohnDoe or John@email.com">
 			<p class="search_drop">Gametype</p>
-			<select class="main_dropdown" name="main_dropdown">
+			<select class="main_dropdown" name="d">
 				<option value="">Select an Option</option>
 				<option value="FPS">FPS</option>
 				<option value="MMO">MMO</option>
@@ -59,12 +59,12 @@
 			//loops through all of the data from the controller
 			foreach ($info as $item) { ?>
 				<!-- goes through all of the items and pulls what it needs to display -->
-				<div class="search_result">
+				<a href="<?php echo base_url('index.php/profile/user/'.$item['user_id'].''); ?>"><div class="search_result">
 					<img src="<?php echo base_url("$item[user_img]"); ?>" class="basic_profile">
 					<p class="username"><?php echo $item['username']; ?></p>
 					<p class="uID"><?php echo $item['user_id']; ?></p>
 					<p class="gametype"><?php echo $item['gametype']; ?></p>
-				</div>
+				</div></a>
 				<?php
 			}
 		?>
@@ -96,7 +96,7 @@
 					data: {
 						'userID': $(this).children('.uID').text(),
 					},
-					success: function(result) {
+					/*success: function(result) {
 						// to get rid of the search results title
 						$(".results_title").html('');
 
@@ -120,7 +120,7 @@
 												'<p class="bio">'+result.bio+'</p>'+
 											'</section>');
 
-						/*$('.back_button').click(function(){
+						$('.back_button').click(function(){
 							console.log('working');
 							$(".result_div").html('');
 							$(".results_title").html('<h1 class="results_title">Search Results</h1>');
@@ -132,10 +132,10 @@
 															//'<p class="gametype"><?php echo $item["gametype"]; ?>//</p>'+
 															'</div>'+
 													'<?php } ?>');
-						});*/
+						});
 
 
-					}
+					}*/
 				});
 			});
 
