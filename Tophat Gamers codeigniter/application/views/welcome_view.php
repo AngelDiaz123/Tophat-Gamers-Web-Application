@@ -21,10 +21,10 @@
 				echo form_open('verifylogin',$attributes); ?>
 				<div class="login_form_div">
 				    <label for="username">Username:</label>
-				    <input type="text" size="20" id="username" name="username">
+				    <input type="text" size="20" class="username_login" name="username">
 				    <br/>
 				    <label for="password">Password:</label>
-				    <input type="password" size="20" id="password" name="password">
+				    <input type="password" size="20" class="password_login" name="password">
 				    <br/>
 				    <input type="submit" value="Login">
 				</div>

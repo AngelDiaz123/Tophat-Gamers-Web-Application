@@ -9,12 +9,10 @@ class retrieve extends CI_Controller {
   }
 
   function index(){
-    $this->uri->segment();
+    
  }
 
   function ajax(){
-    //$title = trim($_GET['userID']);
-    //$url_title = url_title($title, '_');
 
     $userID = trim($_GET['userID']);
     $profile = $this->searchModel->retrieveUser($userID);

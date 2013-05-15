@@ -2,16 +2,34 @@
 <html>
 <head>
 	<title>Search | Tophat Gamers</title>
-	<link href="favicon.ico" rel="icon" type="image/x-icon" />
+	<link href="<?php echo base_url('images/favicon.ico'); ?>" rel="icon" type="image/x-icon" />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Didact+Gothic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('/css/main.css') ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('magnific-popup/magnific-popup.css'); ?>">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="<?php echo base_url('magnific-popup/jquery.magnific-popup.js'); ?>"></script>
 </head>
 <body>
 	<div class="top">
-		<a href=" <?php echo base_url('index.php/search'); ?>" class="logo_link"><img src=" <?php echo base_url('images/tophatGamers.png') ?>" class="top_logo"></a>
+		<div class="login_form" style="color:white;">
+			<?php
+				// hidden login form
+				$attributes = array('id'=>'login_search','class'=>'white-popup-block','class'=>'mfp-hide'); 
+				echo form_open('verifylogin',$attributes); ?>
+				<div class="login_form_div">
+				    <label for="username">Username:</label>
+				    <input type="text" size="20" class="username_login" name="username">
+				    <br/>
+				    <label for="password">Password:</label>
+				    <input type="password" size="20" class="password_login" name="password">
+				    <br/>
+				    <input type="submit" value="Login">
+				</div>
+			</form>
+		</div>
+		<a href="<?php echo base_url('index.php/search'); ?>" class="logo_link"><img src="<?php echo base_url('images/tophatGamers.png') ?>" class="top_logo"></a>
 		<header>
-			<button class="top_login_button">Log In</button>
+			<a class="popup" href="#login_search"><button class="top_login_button">Log In</button></a>
 			<a href="#" class="top_register_link">Register</a>
 		</header>
 	</div>
@@ -55,26 +73,16 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 
+			$('.popup').magnificPopup({ 
+			  type: 'inline'
+				// other options
+			});
+
 			$('.uID').hide();
 
 			$('.result_div').hide();
 
-			$('.result_div').fadeIn(3000);
-
-			//just in case placeholder isnt working in the latest browser, this is back up
-			$('[placeholder]').focus(function() {
-			  var input = $(this);
-			  if (input.val() == input.attr('placeholder')) {
-			    input.val('');
-			    input.removeClass('placeholder');
-			  }
-			}).blur(function() {
-			  var input = $(this);
-			  if (input.val() == '' || input.val() == input.attr('placeholder')) {
-			    input.addClass('placeholder');
-			    input.val(input.attr('placeholder'));
-			  }
-			}).blur();
+			$('.result_div').fadeIn(1000);
 
 			$('.search_result').click(function(){
 				// get the value from the username field                              
@@ -82,7 +90,7 @@
 
 			    // post the username field's value
 				$.ajax({
-					url: "<?php echo base_url('index.php/retrieve/ajax/userID'); ?>",
+					url: "<?php echo base_url('index.php/retrieve/'); ?>",
 					type: 'GET',
 					dataType: 'json',
 					data: {
