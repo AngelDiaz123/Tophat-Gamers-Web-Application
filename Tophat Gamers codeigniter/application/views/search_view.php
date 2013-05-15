@@ -62,7 +62,6 @@
 				<a href="<?php echo base_url('index.php/profile/user/'.$item['user_id'].''); ?>"><div class="search_result">
 					<img src="<?php echo base_url("$item[user_img]"); ?>" class="basic_profile">
 					<p class="username"><?php echo $item['username']; ?></p>
-					<p class="uID"><?php echo $item['user_id']; ?></p>
 					<p class="gametype"><?php echo $item['gametype']; ?></p>
 				</div></a>
 				<?php
@@ -78,66 +77,9 @@
 				// other options
 			});
 
-			$('.uID').hide();
-
 			$('.result_div').hide();
 
 			$('.result_div').fadeIn(1000);
-
-			$('.search_result').click(function(){
-				// get the value from the username field                              
-			    var userId = $(this).children('.uID').text();
-
-			    // post the username field's value
-				$.ajax({
-					url: "<?php echo base_url('index.php/retrieve/'); ?>",
-					type: 'GET',
-					dataType: 'json',
-					data: {
-						'userID': $(this).children('.uID').text(),
-					},
-					/*success: function(result) {
-						// to get rid of the search results title
-						$(".results_title").html('');
-
-						// to clear the result div
-						$(".result_div").html('');
-
-						<?php echo site_url('result.username'); ?>
-
-						// to display the profile after the ajax call was made
-						$(".result_div").html('<section class="profile_div">'+
-												'<button class="back_button">Back</button>'+
-												'<div class="profile_buttons">'+
-													'<button class="message">Message</button>'+
-													'<a href="<?php echo base_url("index.php/stream"); ?>" target="_blank"><button class="stream">Watch Stream</button></a>'+
-													'<button>Follow</button>'+
-												'</div>'+
-												'<img src="<?php echo base_url("'+result.user_img+'"); ?>" class="profile_img">'+
-												'<p class="title">Username</p>'+
-												'<p class="info">'+result.username+'</p><p class="title">Game Type</p>'+
-												'<p class="info">'+result.gametype+'</p><p class="bio_title">Player Biography</p>'+
-												'<p class="bio">'+result.bio+'</p>'+
-											'</section>');
-
-						$('.back_button').click(function(){
-							console.log('working');
-							$(".result_div").html('');
-							$(".results_title").html('<h1 class="results_title">Search Results</h1>');
-							$(".result_div").html('<?php foreach ($info as $item) { ?>'+
-														'<div class="search_result">'+
-															'<img src="<?php echo base_url("$item[user_img]"); ?>" class="basic_profile">'+
-															'<p class="username"><?php echo $item["username"]; ?></p>'+
-															//'<p class="uID"><?php echo $item["user_id"]; ?></p>'+
-															//'<p class="gametype"><?php echo $item["gametype"]; ?>//</p>'+
-															'</div>'+
-													'<?php } ?>');
-						});
-
-
-					}*/
-				});
-			});
 
 		});
 	</script>

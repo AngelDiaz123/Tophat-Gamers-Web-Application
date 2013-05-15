@@ -14,7 +14,12 @@ class Profile extends CI_Controller {
 
   function user($userID){
     $profile = $this->searchModel->retrieveUser($userID);
-    var_dump($profile);
+    if(sizeof($profile) > 0){
+      $data = array('profile' => $profile);
+      $this->load->view('profile_view',$data);
+    }else{
+      echo "no results";
+    }
   }
 
 }
