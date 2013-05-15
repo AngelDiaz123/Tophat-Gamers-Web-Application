@@ -11,8 +11,8 @@ class search extends CI_Controller {
 
     //This method will have the credentials validation
     $this->load->library('form_validation');
-    $user = $this->input->post('main_input');
-    $type = $this->input->post('main_dropdown');
+    $user = $this->input->get('q');
+    $type = $this->input->get('main_dropdown');
 
     $this->form_validation->set_rules('search_input', 'Username or Email', 'trim');
 

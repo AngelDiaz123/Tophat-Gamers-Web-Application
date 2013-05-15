@@ -20,9 +20,9 @@
 	<!-- a search form for username or email or gametype -->
 	<section class="search_div">
 		<h1 class="search_header">Search For A Friend</h1>
-		<?php echo form_open('search'); ?>
+		<?php echo form_open('search', array('method' => 'GET')); ?>
 			<p class="search_text">Search By Username or Email</p>
-			<input type="input" class="main_input" name="main_input" placeholder="Ex. JohnDoe or John@email.com">
+			<input type="input" class="main_input" name="q" placeholder="Ex. JohnDoe or John@email.com">
 			<p class="search_drop">Gametype</p>
 			<select class="main_dropdown" name="main_dropdown">
 				<option value="">Select an Option</option>
@@ -129,7 +129,7 @@
 
 					}
 				});
-			});*/
+			});
 
 		});
 	</script>
