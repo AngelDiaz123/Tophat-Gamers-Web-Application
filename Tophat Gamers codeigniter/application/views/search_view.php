@@ -30,7 +30,7 @@
 		<a href="<?php echo base_url('index.php/search'); ?>" class="logo_link"><img src="<?php echo base_url('images/tophatGamers.png') ?>" class="top_logo"></a>
 		<header>
 			<a class="popup" href="#login_search"><button class="top_login_button">Log In</button></a>
-			<a href="#" class="top_register_link">Register</a>
+			<a href="<?php echo base_url('index.php/register'); ?>" class="top_register_link">Register</a>
 		</header>
 	</div>
 	<div class="top_banner"></div>

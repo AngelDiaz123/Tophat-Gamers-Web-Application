@@ -13,12 +13,16 @@ class Profile extends CI_Controller {
  }
 
   function user($userID){
-    $profile = $this->searchModel->retrieveUser($userID);
-    if(sizeof($profile) > 0){
-      $data = array('profile' => $profile);
-      $this->load->view('profile_view',$data);
+    if($this->session->userdata('logged_in')){
+
     }else{
-      echo "no results";
+      $profile = $this->searchModel->retrieveUser($userID);
+      if(sizeof($profile) > 0){
+        $data = array('profile' => $profile);
+        $this->load->view('profile_view',$data);
+      }else{
+        echo "no results";
+      }
     }
   }
 

@@ -11,8 +11,12 @@ class Stream extends CI_Controller {
   }
 
   function user($streamName){
-  	$data = array("streamName" => $streamName);
-  	$this->load->view('stream_view',$data);
+  	if($this->session->userdata('logged_in')){
+
+    }else{
+	  	$data = array("streamName" => $streamName);
+		$this->load->view('stream_view',$data);
+	}
   }
 
 }

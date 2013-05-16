@@ -11,7 +11,7 @@
 		<a href="#" class="logo_link"><img src="<?php echo base_url('images/tophatGamers.png'); ?>" class="top_logo"></a>
 		<header>
 			<button class="top_login_button">Log In</button>
-			<a href="#" class="top_register_link">Register</a>
+			<a href="<?php echo base_url('index.php/register'); ?>" class="top_register_link">Register</a>
 		</header>
 	</div>
 	<div class="top_banner"></div>

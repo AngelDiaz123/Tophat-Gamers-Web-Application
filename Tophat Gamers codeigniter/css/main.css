@@ -25,6 +25,7 @@ table {
 /*------- beggining CSS ------------*/
 body {
 	font-family: 'Didact Gothic', sans-serif;
+	color: white;
 	background-image: url("../images/black_lozenge.png");
 	margin: 0;
 	padding: 0;
