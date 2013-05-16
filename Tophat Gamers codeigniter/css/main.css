@@ -744,6 +744,12 @@ body {
 	border-bottom-color: white;
 }
 
+/*------------- Register -----------------*/
+.register_form_div {
+	width: 400px;
+	margin: 0 auto;
+}
+
 /*------------- Make post ----------------*/
 
 .user_post {

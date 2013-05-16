@@ -33,7 +33,7 @@
 		<header>
 			<!-- to display the hidden form -->
 			<a class="popup_login" href="#login"><button class="login_button">Log In</button></a>
-			<a href="<?php echo base_url('register'); ?>" class="register_link">Register</a>
+			<a href="<?php echo base_url('index.php/register'); ?>" class="register_link">Register</a>
 			<?php
 				// for the search form
 				$attributes = array("class"=>'search_form');

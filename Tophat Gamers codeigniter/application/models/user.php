@@ -20,7 +20,6 @@
     }
 
     function register($username, $email, $password){
-
       $this->db->select('username, email');
       $this->db->from('users');
       $this->db->where('username', $username);
@@ -29,11 +28,10 @@
       $query = $this->db->get();
 
       if($query->num_rows() > 0){
-        $this->load->view('copyUserEmail_view');
+        return false;
       }else{
-        $data = array('username'=>$username,'email'=>$email,'password'=>MD5($password));
+        $data = array('username'=>$username,'email'=>$email,'password'=>MD5($password),'user_img'=>"images/basic_profile.jpg");
         $this->db->insert('users', $data);
-        
         $this->db->select('user_id, username, password');
         $this->db->from('users');
         $this->db->where('username', $username);

@@ -3,12 +3,8 @@
     // a all around search
     function search(){
 
-      $this->db->select('username, users.user_id');
+      $this->db->select('username, user_id, user_img, gametype');
       $this->db->from('users');
-      $this->db->join('profile','users.user_id = profile.user_id');
-      $this->db->select('user_img');
-      $this->db->join('gametype','profile.user_id = gametype.user_id');
-      $this->db->select('gametype');
 
       $query = $this->db->get();
       return $query->result_array();
@@ -18,12 +14,8 @@
     function searchBoth($user,$type){
       $where = "username ='$user' AND gametype ='$type'";
 
-      $this->db->select('username, users.user_id');
+      $this->db->select('username, user_id, user_img, gametype');
       $this->db->from('users');
-      $this->db->join('profile','users.user_id = profile.user_id');
-      $this->db->select('user_img');
-      $this->db->join('gametype','profile.user_id = gametype.user_id');
-      $this->db->select('gametype');
       $this->db->where($where);
 
 
@@ -34,12 +26,8 @@
     // a search by username
     function searchUser($user){
 
-      $this->db->select('username, users.user_id');
+      $this->db->select('username, user_id, user_img, gametype');
       $this->db->from('users');
-      $this->db->join('profile','users.user_id = profile.user_id');
-      $this->db->select('user_img');
-      $this->db->join('gametype','profile.user_id = gametype.user_id');
-      $this->db->select('gametype');
       $this->db->where('username',$user);
 
 
@@ -50,12 +38,8 @@
     // a search by gametype
     function searchType($type){
 
-      $this->db->select('username, users.user_id');
+      $this->db->select('username, user_id, user_img, gametype');
       $this->db->from('users');
-      $this->db->join('profile','users.user_id = profile.user_id');
-      $this->db->select('user_img');
-      $this->db->join('gametype','profile.user_id = gametype.user_id');
-      $this->db->select('gametype');
       $this->db->where('gametype',$type);
 
 
@@ -67,12 +51,8 @@
     function searchEmailAndType($email,$type){
       $where = "email='$email' AND gametype='$type'";
 
-      $this->db->select('username,email, users.user_id');
+      $this->db->select('username, email, user_id, user_img, gametype');
       $this->db->from('users');
-      $this->db->join('profile','users.user_id = profile.user_id');
-      $this->db->select('user_img');
-      $this->db->join('gametype','profile.user_id = gametype.user_id');
-      $this->db->select('gametype');
       $this->db->where('email',$email);
 
 
@@ -83,12 +63,8 @@
     // a search by email address
     function searchEmail($email){
 
-      $this->db->select('username,email, users.user_id');
+      $this->db->select('username, email, user_id, user_img, gametype');
       $this->db->from('users');
-      $this->db->join('profile','users.user_id = profile.user_id');
-      $this->db->select('user_img');
-      $this->db->join('gametype','profile.user_id = gametype.user_id');
-      $this->db->select('gametype');
       $this->db->where('email',$email);
 
 
@@ -98,13 +74,11 @@
 
     // a ajax search for a profile
     function retrieveUser($id){
-      $this->db->select('username, youtube_username, twitch_username');
+      $this->db->select('username, users.user_id, user_img, gametype, twitch_username, youtube_username');
       $this->db->from('users');
       $this->db->join('profile','users.user_id = profile.user_id');
-      $this->db->select('user_img, bio');
-      $this->db->join('gametype','profile.user_id = gametype.user_id');
-      $this->db->select('gametype');
-      $this->db->where('profile.user_id',$id);
+      $this->db->select('bio');
+      $this->db->where('users.user_id',$id);
       $this->db->limit(1);
 
       $query = $this->db->get();

@@ -19,10 +19,10 @@
 	</div>
 	<div class="top_banner"></div>
 
-	<h1>Register</h1>
-	<?php echo validation_errors(); ?>
-	<?php echo form_open('registerUser'); ?>
-		<div class="register_form_div">
+	<div class="register_form_div">
+		<h1>Register</h1>
+		<?php echo validation_errors(); ?>
+		<?php echo form_open('registerUser'); ?>
 			<label for="username">Username:</label>
 			<input type="text" size="20" class="username_register" name="username">
 			<br/>
@@ -33,8 +33,8 @@
 			<input type="password" size="20" class="password_register" name="password">
 			<br/>
 			<input type="submit" value="Login">
-		</div>
-	</form>
+		</form>
+	</div>
 
 	
 
