@@ -7,7 +7,12 @@ class Stream extends CI_Controller {
  }
 
   function index(){
-    $this->load->view('stream_view');
+    
+  }
+
+  function user($streamName){
+  	$data = array("streamName" => $streamName);
+  	$this->load->view('stream_view',$data);
   }
 
 }

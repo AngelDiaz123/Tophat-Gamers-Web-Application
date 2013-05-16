@@ -22,7 +22,7 @@
 	<section class="profile_div">
 		<div class="profile_buttons">
 			<button class="message">Message</button>
-			<a href="<?php echo base_url("index.php/stream"); ?>" target="_blank"><button class="stream">Watch Stream</button></a>
+			<a href="<?php echo base_url("index.php/stream/user/$profile[twitch_username]"); ?>" target="_blank"><button class="stream">Watch Stream</button></a>
 			<button>Follow</button>
 		</div>
 		<div id="profile_top">

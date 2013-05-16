@@ -23,7 +23,7 @@
 		        height="400" 
 		        width="620" 
 		        id="live_embed_player_flash" 
-		        data="http://www.twitch.tv/widgets/live_embed_player.swf?channel=DanDinh" 
+		        data="http://www.twitch.tv/widgets/live_embed_player.swf?channel=<?php echo $streamName; ?>" 
 		        bgcolor="#000000">
 		    <param  name="allowFullScreen" 
 		            value="true" />
@@ -34,7 +34,7 @@
 		    <param  name="movie" 
 		            value="http://www.twitch.tv/widgets/live_embed_player.swf" />
 		    <param  name="flashvars" 
-		            value="hostname=www.twitch.tv&channel=DanDinh&auto_play=true&start_volume=50" />
+		            value="hostname=www.twitch.tv&channel=<?php echo $streamName; ?>&auto_play=true&start_volume=50" />
 		  </object>
 		</div>
   <!-- the code for the chat -->
@@ -42,7 +42,7 @@
 			<iframe frameborder="0" 
 			    scrolling="no" 
 			    id="chat_embed" 
-			    src="http://twitch.tv/chat/embed?channel=DanDinh&amp;popout_chat=true" 
+			    src="http://twitch.tv/chat/embed?channel=<?php echo $streamName; ?>&amp;popout_chat=true" 
 			    height="400" 
 			    width="300">
 			</iframe>
