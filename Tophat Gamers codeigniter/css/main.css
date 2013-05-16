@@ -75,6 +75,7 @@ body {
 
 .messageAlert p{
 		margin: 0;
+		font-size: 1em;
 		text-align: center;													 
 }
 
@@ -158,12 +159,11 @@ body {
 }
 
 .logo {
-	margin-left: 250px;
-	margin-top: 10px;
+	margin-left: 200px;
 	float: left;
 	position: absolute;
-	width: 50px;
-	height: 80px;
+	width: 70px;
+	height: 100px;
 }
 
 #home_header h1 {
@@ -558,7 +558,6 @@ body {
 .bio_title {
 	font-family: 'Didact Gothic', sans-serif;
 	font-size: 1.5em;
-	width: 800px;
 	margin-left: 20px;
 	padding-top: 30px;
 	padding-bottom: 5px;
@@ -567,11 +566,36 @@ body {
 }
 
 .bio {
-	width: 860px;
 	margin-left: 20px;
 	padding-bottom: 50px;
 	overflow: hidden;
 }
+
+#profile_bio {
+	float: right;
+	clear: both;
+	width: 640px;
+}
+
+#profile_video {
+	float: right;
+	clear: both;
+	width: 640px;
+}
+
+.youtube_video {
+	margin-left: 20px;
+	margin-top: 20px;
+	float: left;
+}
+
+#profile_post {
+	float: right;
+	clear: both;
+	width: 640px;
+}
+
+
 
 /*------------- Contact Us Page ----------*/
 .contact_div {
@@ -748,6 +772,16 @@ body {
 .register_form_div {
 	width: 400px;
 	margin: 0 auto;
+}
+
+/*------------- Dashboard ----------------*/
+.logout_link {
+	text-decoration: none;
+	color: white;
+	font-size: 1.2em;
+	float: right;
+	margin-top: 40px;
+	margin-right: 200px;
 }
 
 /*------------- Make post ----------------*/

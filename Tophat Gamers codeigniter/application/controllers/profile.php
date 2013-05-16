@@ -22,6 +22,7 @@ class Profile extends CI_Controller {
         $this->load->view('profile_view',$data);
       }else{
         echo "no results";
+        //redirect to the 404 page instead
       }
     }
   }

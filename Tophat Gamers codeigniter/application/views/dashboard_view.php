@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html>
 	<head>
-   		<title>Simple Login with CodeIgniter - Private Area</title>
-   		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-   		<link rel="stylesheet" type="text/css" href="<?php echo base_url('/css/main.css') ?>">
- 	</head>
+	<title>Dashboard | Tophat Gamers</title>
+	<link href="<?php echo base_url('images/favicon.ico'); ?>" rel="icon" type="image/x-icon" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Didact+Gothic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('/css/main.css') ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('magnific-popup/magnific-popup.css'); ?>">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="<?php echo base_url('magnific-popup/jquery.magnific-popup.js'); ?>"></script>
+</head>
  	<body>
+ 		<div class="top">
+			<a href="<?php echo base_url('index.php/search'); ?>" class="logo_link"><img src="<?php echo base_url('images/tophatGamers.png') ?>" class="top_logo"></a>
+			<header>
+				<a class="logout_link" href="dashboard/logout">Logout</a>
+			</header>
+		</div>
+		<div class="top_banner"></div>
 	 	<!-- <div class="infoAlert messageAlert">
 				 <h3>FYI, something just happened!</h3>
 				 <p>This is just an info notification message.</p>
@@ -23,11 +34,10 @@
 
 		<div class="successAlert messageAlert">
 				 <h3>You Logged In</h3>
+				 <p>Welcome Back <?php echo $username; ?>!</p>
 		</div>
 
 	   <h1>Home</h1>
-	   <h2>Welcome <?php echo $username; ?>!</h2>
-	   <a href="dashboard/logout">Logout</a>
 
 	   <script type="text/javascript">
 	   		// var myMessages = ['infoAlert','warningAlert','errorAlert','successAlert'];
@@ -70,6 +80,18 @@
 			});
 
 	   </script>
+
+	   <!-- google analytics -->
+	   <script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-41003327-1', 'tophatgamers.com');
+		  ga('send', 'pageview');
+
+		</script>
 
  </body>
 </html>

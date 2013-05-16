@@ -37,8 +37,10 @@
 			<p class="bio"><?php echo $profile['bio']; ?></p>
 		</div>
 		<div id="profile_video">
+			<h1>Videos</h1>
 		</div>
 		<div id="profile_post">
+			<h1>Post</h1>
 		</div>
 	</section>
 
@@ -53,15 +55,14 @@
 	</div>
 
 	<script type="text/javascript">
-		var username;
-		username = <?php echo $profile['youtube_username']; ?>;
+		var username = '<?= $profile['youtube_username'] ?>';
 
         var videos = document.getElementById('profile_video');
 
         $.ajax({
             type: "GET",
             //the username of the youtube account
-            url: "https://gdata.youtube.com/feeds/api/users//uploads",
+            url: "https://gdata.youtube.com/feeds/api/users/" + username + "/uploads",
             dataType: "json",
             //switch it to json instead of xml
             data: {alt: 'json'},
@@ -78,7 +79,7 @@
                     //creates the div for the iframe and youtube player
                     video = document.createElement("ytplayer");
                     //add the frame and the video that will be shown
-                    video.innerHTML='<iframe id="player" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/'+video_id+'?enablejsapi=1" frameborder="0"></iframe>';
+                    video.innerHTML='<div class="youtube_video"><iframe id="player" type="text/html" width="300" height="169" src="http://www.youtube.com/embed/'+video_id+'?enablejsapi=1" frameborder="0"></iframe></div>';
                     //add it to the videos div
                     videos.appendChild(video);
                 }
@@ -89,6 +90,18 @@
         });
 
         </script>
+
+        <!-- google analytics -->
+	   <script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-41003327-1', 'tophatgamers.com');
+		  ga('send', 'pageview');
+
+		</script>
 
 </body>
 </html>
