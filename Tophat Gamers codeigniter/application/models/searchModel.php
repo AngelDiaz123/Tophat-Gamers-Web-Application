@@ -98,7 +98,7 @@
 
     // a ajax search for a profile
     function retrieveUser($id){
-      $this->db->select('username');
+      $this->db->select('username, youtube_username');
       $this->db->from('users');
       $this->db->join('profile','users.user_id = profile.user_id');
       $this->db->select('user_img, bio');
