@@ -8,9 +8,6 @@ class searchHome extends CI_Controller {
  }
 
   function index(){
-    if($this->session->userdata('logged_in')){
-
-    }else{
       //This method will have the credentials validation
       $this->load->library('form_validation');
       $user = $this->input->post('search_input');
@@ -41,7 +38,6 @@ class searchHome extends CI_Controller {
         $this->load->view('search_view',$data);
 
       }
-    }
   }
 
 }

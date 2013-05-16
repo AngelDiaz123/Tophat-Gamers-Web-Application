@@ -558,16 +558,12 @@ body {
 .bio_title {
 	font-family: 'Didact Gothic', sans-serif;
 	font-size: 1.5em;
-	margin-left: 20px;
-	padding-top: 30px;
 	padding-bottom: 5px;
 	clear: both;
 	overflow: hidden;
 }
 
 .bio {
-	margin-left: 20px;
-	padding-bottom: 50px;
 	overflow: hidden;
 }
 

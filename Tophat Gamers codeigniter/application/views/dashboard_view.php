@@ -13,7 +13,7 @@
  		<div class="top">
 			<a href="<?php echo base_url('index.php/search'); ?>" class="logo_link"><img src="<?php echo base_url('images/tophatGamers.png') ?>" class="top_logo"></a>
 			<header>
-				<a class="logout_link" href="dashboard/logout">Logout</a>
+				<a class="logout_link" href="<?php echo base_url('index.php/dashboard/logout'); ?>">Logout</a>
 			</header>
 		</div>
 		<div class="top_banner"></div>

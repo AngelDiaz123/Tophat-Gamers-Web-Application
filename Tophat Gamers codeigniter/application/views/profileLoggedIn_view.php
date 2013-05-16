@@ -11,13 +11,12 @@
 </head>
 <body>
 	<div class="top">
-		<a href="<?php echo base_url('index.php/search'); ?>" class="logo_link"><img src="<?php echo base_url('images/tophatGamers.png'); ?>" class="top_logo"></a>
-		<header>
-			<button class="top_login_button">Log In</button>
-			<a href="<?php echo base_url('index.php/register'); ?>" class="top_register_link">Register</a>
-		</header>
-	</div>
-	<div class="top_banner"></div>
+			<a href="<?php echo base_url('index.php/search'); ?>" class="logo_link"><img src="<?php echo base_url('images/tophatGamers.png') ?>" class="top_logo"></a>
+			<header>
+				<a class="logout_link" href="<?php echo base_url('index.php/dashboard/logout'); ?>">Logout</a>
+			</header>
+		</div>
+		<div class="top_banner"></div>
 
 	<section class="profile_div">
 		<div class="profile_buttons">

@@ -14,7 +14,14 @@ class Profile extends CI_Controller {
 
   function user($userID){
     if($this->session->userdata('logged_in')){
-
+      $profile = $this->searchModel->retrieveUser($userID);
+      if(sizeof($profile) > 0){
+        $data = array('profile' => $profile);
+        $this->load->view('profileLoggedIn_view',$data);
+      }else{
+        echo "no results";
+        //redirect to the 404 page instead
+      }
     }else{
       $profile = $this->searchModel->retrieveUser($userID);
       if(sizeof($profile) > 0){
