@@ -42,5 +42,19 @@
         return $query->result();
       }
     }
+
+    function pullUserInfo($id){
+      $this->db->select('email, user_id, username, youtube_username, twitch_username, gametype');
+      $this->db->from('users');
+      $this->db->where('user_id',$id);
+      $query = $this->db->get();
+      return $query->result_array();
+    }
+
+    function updateUser($user_id, $username, $email, $youtube, $twitch, $gametype){
+      $data = array('user_id'=>$user_id,'username'=>$username, 'email'=>$email,'youtube_username'=>$youtube,'twitch_username'=>$twitch,'gametype'=>$gametype);
+      $this->db->where('user_id', $user_id);
+      $this->db->update('users', $data);
+    }
   }
 ?>

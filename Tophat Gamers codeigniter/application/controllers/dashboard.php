@@ -5,6 +5,7 @@ class Dashboard extends CI_Controller {
  function __construct()
  {
    parent::__construct();
+   $this->load->model('user');
  }
 
  function index()
@@ -12,7 +13,8 @@ class Dashboard extends CI_Controller {
    if($this->session->userdata('logged_in'))
    {
      $session_data = $this->session->userdata('logged_in');
-     $data['username'] = $session_data['username'];
+     $info = $this->user->pullUserInfo($session_data['id']);
+     $data = array('info' => $info[0]);
      $this->load->view('dashboard_view', $data);
    }
    else
@@ -22,12 +24,22 @@ class Dashboard extends CI_Controller {
    }
  }
 
- function logout()
- {
-   $this->session->unset_userdata('logged_in');
-   session_destroy();
-   redirect('welcome', 'refresh');
+ function logout(){
+  $this->session->unset_userdata('logged_in');
+  session_destroy();
+  redirect('welcome', 'refresh');
  }
+
+  function editAccount($id){
+    $userID = $id;
+    $username = $this->input->post('username');
+    $email = $this->input->post('email');
+    $youtube = $this->input->post('youtube');
+    $gametype = $this->input->post('gametype');
+    $twitch = $this->input->post('twitch');
+    $this->user->updateUser($userID, $username, $email, $youtube, $username, $twitch);
+    redirect('Dashboard', 'refresh');
+  }
 
 }
 

@@ -34,10 +34,34 @@
 
 		<div class="successAlert messageAlert">
 				 <h3>You Logged In</h3>
-				 <p>Welcome Back <?php echo $username; ?>!</p>
+				 <p>Welcome Back <?php echo $info['username']; ?>!</p>
 		</div>
 
-	   <h1>Home</h1>
+	   <h1>Dashboard</h1>
+
+		<?php echo form_open("dashboard/editAccount/".$info['user_id']); ?>
+			<label for="username">Username:</label>
+			<input type="text" size="20" name="username" value="<?php echo $info['username']; ?>">
+			<br/>
+			<label for="email">Email:</label>
+			<input type="text" name="email" value="<?php echo $info['email']; ?>">
+			<br/>
+			<label for"youtube">Youtube Username:</label>
+			<input type="text" name="youtube" value="<?php echo $info['youtube_username']; ?>">
+			<br/>
+			<label for"twitch">Twitch Username:</label>
+			<input type="text" name="twitch" value="<?php echo $info['twitch_username']; ?>">
+			<br/>
+			<select name="gametype">
+				<option value="<?php echo $info['twitch_username']; ?>">Select an Option</option>
+				<option value="FPS">FPS</option>
+				<option value="MMO">MMO</option>
+				<option value="Test">Test</option>
+			</select>
+			<br/>
+			<input type="submit" value="Update">
+		</form>
+
 
 	   <script type="text/javascript">
 	   		// var myMessages = ['infoAlert','warningAlert','errorAlert','successAlert'];
