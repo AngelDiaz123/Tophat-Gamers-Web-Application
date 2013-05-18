@@ -37,7 +37,7 @@ class Dashboard extends CI_Controller {
     $youtube = $this->input->post('youtube');
     $gametype = $this->input->post('gametype');
     $twitch = $this->input->post('twitch');
-    $this->user->updateUser($userID, $username, $email, $youtube, $username, $twitch);
+    $this->user->updateUser($userID, $username, $email, $youtube, $twitch, $gametype);
     redirect('Dashboard', 'refresh');
   }
 

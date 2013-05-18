@@ -10,6 +10,10 @@
 	<script src="<?php echo base_url('magnific-popup/jquery.magnific-popup.js'); ?>"></script>
 </head>
  	<body>
+ 		<div class="successAlert messageAlert">
+			<h3>You Logged In</h3>
+			<p>Welcome Back <?php echo $info['username']; ?>!</p>
+		</div>
  		<div class="top">
 			<a href="<?php echo base_url('index.php/search'); ?>" class="logo_link"><img src="<?php echo base_url('images/tophatGamers.png') ?>" class="top_logo"></a>
 			<header>
@@ -31,11 +35,6 @@
 				 <h3>Wait, I must warn you!</h3>
 				 <p>This is just a warning notification message.</p>
 		</div> -->
-
-		<div class="successAlert messageAlert">
-				 <h3>You Logged In</h3>
-				 <p>Welcome Back <?php echo $info['username']; ?>!</p>
-		</div>
 
 	   <h1>Dashboard</h1>
 
