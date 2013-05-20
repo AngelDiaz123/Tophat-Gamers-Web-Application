@@ -52,15 +52,18 @@
 		<div class="holder">
 			<div class="group_img circles">
 				<img src="<?php echo base_url('images/people.png') ?>" class="circle_people">
-				<p class="people_text">Come and interact with people that have the same love for games that you do.</p>
+				<h1 class="connect">Connect</h1>
+				<p class="people_text">Connect with others with the same interest.</p>
 			</div>
 			<div class="group_file circles">
 				<img src="<?php echo base_url('images/file.png') ?>" class="circle_file">
-				<p class="file_text">Let others read your ideas by creating blogs for others on the site.</p>
+				<h1 class="read">Read</h1>
+				<p class="file_text">Read blogs from your favorite users.</p>
 			</div>
 			<div class="group_play circles">
 				<img src="<?php echo base_url('images/play_img.png') ?>" class="circle_play">
-				<p class="play_text">Watch videos from other users to catch up on their interest and gaming styles.</p>
+				<h1 class="watch">Watch</h1>
+				<p class="play_text">Watch videos from of their gameplay</p>
 			</div>
 		</div>
 	</section>

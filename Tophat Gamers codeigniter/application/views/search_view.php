@@ -41,15 +41,19 @@
 		<?php echo form_open('search', array('method' => 'GET')); ?>
 			<p class="search_text">Search By Username or Email</p>
 			<input type="input" class="main_input" name="q" placeholder="Ex. JohnDoe or John@email.com">
-			<p class="search_drop">Gametype</p>
-			<select class="main_dropdown" name="d">
-				<option value="">Select an Option</option>
-				<option value="FPS">FPS</option>
-				<option value="MMO">MMO</option>
-				<option value="Test">Test</option>
-			</select>
-
 			<input type="submit" value="SEARCH" class="main_search_button">
+			<h2 class="e_options">Extra Options<button type="button" class="extra"> >> </button></h2>
+			<div class="extra_options">
+				<p class="search_drop">Gametype</p>
+				<select class="main_dropdown" name="d">
+					<option value="">Select an Option</option>
+					<option value="FPS">FPS</option>
+					<option value="MMO">MMO</option>
+					<option value="Test">Test</option>
+				</select>
+			</div>
+
+			
 		</form>
 	</section>
 
@@ -75,6 +79,19 @@
 			$('.popup').magnificPopup({ 
 			  type: 'inline'
 				// other options
+			});
+
+			$('.extra_options').hide();
+			$('.extra').addClass('active');
+
+			$('.extra').click(function(){
+				if($('.extra').hasClass('active')){
+					$('.extra').removeClass('active');
+					$('.extra_options').show();
+				}else{
+					$('.extra').addClass('active');
+					$('.extra_options').hide();
+				}
 			});
 
 			$('.result_div').hide();
