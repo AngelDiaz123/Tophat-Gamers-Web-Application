@@ -11,9 +11,60 @@
 </head>
 <body>
 	<div class="top">
+		<div class="login_form" style="color:white;">
+			<?php
+				// hidden login form
+				$attributes = array('id'=>'login_profile','class'=>'white-popup-block','class'=>'mfp-hide'); 
+				echo form_open('verifylogin',$attributes); ?>
+				<div class="login_form_div">
+					<h1>Login</h1>
+				    <label for="username">Username:</label>
+				    <input type="text" size="20" class="username_login" name="username">
+				    <br/>
+				    <label for="password">Password:</label>
+				    <input type="password" size="20" class="password_login" name="password">
+				    <br/>
+				    <input type="submit" value="Login">
+				</div>
+			</form>
+		</div>
+		<div class="login_form" style="color:white;">
+			<?php
+				// hidden login form
+				$attributes = array('id'=>'message','class'=>'white-popup-block','class'=>'mfp-hide'); 
+				echo form_open('verifylogin',$attributes); ?>
+				<div class="login_form_div">
+					<h1>Please sign in to message user</h1>
+				    <label for="username">Username:</label>
+				    <input type="text" size="20" class="username_login" name="username">
+				    <br/>
+				    <label for="password">Password:</label>
+				    <input type="password" size="20" class="password_login" name="password">
+				    <br/>
+				    <input type="submit" value="Login">
+				</div>
+			</form>
+		</div>
+		<div class="login_form" style="color:white;">
+			<?php
+				// hidden login form
+				$attributes = array('id'=>'follow','class'=>'white-popup-block','class'=>'mfp-hide'); 
+				echo form_open('verifylogin',$attributes); ?>
+				<div class="login_form_div">
+					<h1>Please sign in to follow the user</h1>
+				    <label for="username">Username:</label>
+				    <input type="text" size="20" class="username_login" name="username">
+				    <br/>
+				    <label for="password">Password:</label>
+				    <input type="password" size="20" class="password_login" name="password">
+				    <br/>
+				    <input type="submit" value="Login">
+				</div>
+			</form>
+		</div>
 		<a href="<?php echo base_url('index.php/search'); ?>" class="logo_link"><img src="<?php echo base_url('images/tophatGamers.png'); ?>" class="top_logo"></a>
 		<header>
-			<button class="top_login_button">Log In</button>
+			<a class="popup" href="#login_profile"><button class="top_login_button">Log In</button></a>
 			<a href="<?php echo base_url('index.php/register'); ?>" class="top_register_link">Register</a>
 		</header>
 	</div>
@@ -21,9 +72,9 @@
 
 	<section class="profile_div">
 		<div class="profile_buttons">
-			<button class="message">Message</button>
+			<a class="msgBtn" href="#message"><button class="message">Message</button></a>
 			<a href="<?php echo base_url("index.php/stream/user/$profile[twitch_username]"); ?>" target="_blank"><button class="stream">Watch Stream</button></a>
-			<button>Follow</button>
+			<a class="followBtn" href="#follow"><button>Follow</button></a>
 		</div>
 		<div id="profile_top">
 			<img src="<?php echo base_url("$profile[user_img]"); ?>" class="profile_img">
@@ -55,6 +106,23 @@
 	</div>
 
 	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.popup').magnificPopup({ 
+			  type: 'inline'
+				// other options
+			});
+			$('.msgBtn').magnificPopup({ 
+			  type: 'inline'
+				// other options
+			});
+			$('.followBtn').magnificPopup({ 
+			  type: 'inline'
+				// other options
+			});
+		});
+
+		
+
 		var username = '<?= $profile['youtube_username'] ?>';
 
         var videos = document.getElementById('profile_video');
