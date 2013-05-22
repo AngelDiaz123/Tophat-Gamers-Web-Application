@@ -11,16 +11,37 @@
 </head>
 <body>
 	<div class="top">
+		<div class="login_form" style="color:white;">
+			<?php
+				// hidden login form
+				$attributes = array('id'=>'message_form','class'=>'white-popup-block','class'=>'mfp-hide'); 
+				echo form_open('messageuser',$attributes); ?>
+				<div class="login_form_div">
+					<h1>Message <?php echo $profile['username']; ?></h1>
+				    <label for="message">Message:</label>
+				    <textarea rows="15" cols="39" class="message_user" name="message"></textarea>
+				    <br/>
+				    <input type="submit" value="Message">
+				</div>
+			</form>
+		</div>
 			<a href="<?php echo base_url('index.php/search'); ?>" class="logo_link"><img src="<?php echo base_url('images/tophatGamers.png') ?>" class="top_logo"></a>
 			<header>
-				<a class="logout_link" href="<?php echo base_url('index.php/dashboard/logout'); ?>">Logout</a>
+				<a href="<?php echo base_url('index.php/search'); ?>" class="search_link navigation">Search</a>
+				<span class="line">|</span>
+				<a class="dashboard_link navigation" href="<?php echo base_url('index.php/dashboard/'); ?>">Dashboard</a>
+				<span class="line">|</span>
+				<a class="create_link navigation" href="<?php echo base_url('index.php/createPost'); ?>">Create a Post</a>
+				<span class="line">|</span>
+				<a class="read_link navigation" href="<?php echo base_url('index.php/readMail'); ?>">Mail</a>
+				<a class="logout_link navigation" href="<?php echo base_url('index.php/dashboard/logout'); ?>">Logout</a>
 			</header>
 		</div>
 		<div class="top_banner"></div>
 
 	<section class="profile_div">
 		<div class="profile_buttons">
-			<button class="message">Message</button>
+			<a class="msgBtn" href="#message_form"><button class="message">Message</button></a>
 			<a href="<?php echo base_url("index.php/stream/user/$profile[twitch_username]"); ?>" target="_blank"><button class="stream">Watch Stream</button></a>
 			<button>Follow</button>
 		</div>
@@ -54,6 +75,13 @@
 	</div>
 
 	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.msgBtn').magnificPopup({ 
+			  type: 'inline'
+				// other options
+			});
+		});
+
 		var username = '<?= $profile['youtube_username'] ?>';
 
         var videos = document.getElementById('profile_video');

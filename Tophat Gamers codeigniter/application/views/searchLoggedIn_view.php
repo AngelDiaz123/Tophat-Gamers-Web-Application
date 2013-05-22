@@ -13,7 +13,14 @@
 	<div class="top">
 			<a href="<?php echo base_url('index.php/search'); ?>" class="logo_link"><img src="<?php echo base_url('images/tophatGamers.png') ?>" class="top_logo"></a>
 			<header>
-				<a class="logout_link" href="<?php echo base_url('index.php/dashboard/logout'); ?>">Logout</a>
+				<a href="<?php echo base_url('index.php/search'); ?>" class="search_link navigation onPage">Search</a>
+				<span class="line">|</span>
+				<a class="dashboard_link navigation" href="<?php echo base_url('index.php/dashboard/'); ?>">Dashboard</a>
+				<span class="line">|</span>
+				<a class="create_link navigation" href="<?php echo base_url('index.php/createPost'); ?>">Create a Post</a>
+				<span class="line">|</span>
+				<a class="read_link navigation" href="<?php echo base_url('index.php/readMail'); ?>">Mail</a>
+				<a class="logout_link navigation" href="<?php echo base_url('index.php/dashboard/logout'); ?>">Logout</a>
 			</header>
 		</div>
 		<div class="top_banner"></div>

@@ -98,6 +98,44 @@ body {
 }
 
 /*------ global Nav ---------------*/
+.navigation {
+	text-decoration: none;
+	color: white;
+	float: left;
+	font-size: 1.1em;
+}
+
+.line {
+	font-size: 1.5em;
+	float: left;
+	margin-top: 38px;
+	margin-left: 50px;
+}
+
+.search_link {
+	margin-left: 450px;
+	margin-top: 40px;
+}
+
+.dashboard_link {
+	margin-left: 50px;
+	margin-top: 40px;
+}
+
+.read_link {
+	margin-left: 50px;
+	margin-top: 40px;
+}
+
+.create_link {
+	margin-left: 50px;
+	margin-top: 40px;
+}
+
+.onPage {
+	color: grey;
+}
+
 .top_login_button {
 	float: right;
 	margin-right: 380px;
