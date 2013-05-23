@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Profile | Tophat Gamers</title>
+	<title>Create a Post | Tophat Gamers</title>
 	<link href="<?php echo base_url('images/favicon.ico'); ?>" rel="icon" type="image/x-icon" />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Didact+Gothic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('/css/main.css') ?>">
@@ -27,7 +27,11 @@
 	<div class="top_banner"></div>
 
 	<section class="create_div">
-		<?php echo form_open('createPost/user/'); ?>
+		<?php echo form_open('createPost/user/$userID'); ?>
+			<input type="text" class="header_input">
+			</br>
+			<textarea class="post_entry"></textarea>
+		</form>
 
 	</section>
 
@@ -42,7 +46,11 @@
 	</div>
 
 	<script type="text/javascript">
-
+		tinymce.init({
+			selector:'textarea',
+			width: 960,
+			height: 500
+		});
     </script>
 
     <!-- google analytics -->

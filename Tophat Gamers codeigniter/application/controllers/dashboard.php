@@ -8,27 +8,26 @@ class Dashboard extends CI_Controller {
    $this->load->model('user');
  }
 
- function index()
- {
-   if($this->session->userdata('logged_in'))
-   {
-     $session_data = $this->session->userdata('logged_in');
-     $info = $this->user->pullUserInfo($session_data['id']);
-     $data = array('info' => $info[0]);
-     $this->load->view('dashboard_view', $data);
-   }
-   else
-   {
-     //If no session, redirect to login page
-     redirect('welcome', 'refresh');
-   }
- }
+ function index(){
 
- function logout(){
-  $this->session->unset_userdata('logged_in');
-  session_destroy();
-  redirect('welcome', 'refresh');
- }
+    if($this->session->userdata('logged_in')){
+
+      $session_data = $this->session->userdata('logged_in');
+      $info = $this->user->pullUserInfo($session_data['id']);
+      $data = array('info' => $info[0]);
+      $this->load->view('dashboard_view', $data);
+
+    }else{
+      //If no session, redirect to login page
+      redirect('welcome', 'refresh');
+    }
+  }
+
+  function logout(){
+    $this->session->unset_userdata('logged_in');
+    session_destroy();
+    redirect('welcome', 'refresh');
+   }
 
   function editAccount($id){
     $userID = $id;
