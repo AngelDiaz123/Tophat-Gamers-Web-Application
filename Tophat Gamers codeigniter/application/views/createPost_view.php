@@ -27,10 +27,13 @@
 	<div class="top_banner"></div>
 
 	<section class="create_div">
-		<?php echo form_open('createPost/user/$userID'); ?>
-			<input type="text" class="header_input">
+		<?php echo form_open('createPost/savePost/'.$userID); ?>
+			<h1 class="post_title">Title of post</h1>
+			<input type="text" name="title" class="title_input">
 			</br>
-			<textarea class="post_entry"></textarea>
+			<h1 class="post_msg">Post message</h1>
+			<textarea name="post" class="post_entry"></textarea>
+			<input type="Submit" class="submit_post">
 		</form>
 
 	</section>
@@ -48,8 +51,12 @@
 	<script type="text/javascript">
 		tinymce.init({
 			selector:'textarea',
-			width: 960,
-			height: 500
+			plugins: "image",
+			width: 800,
+			height: 500,
+			browser_spellcheck: true,
+			resize: false,
+
 		});
     </script>
 

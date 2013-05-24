@@ -83,6 +83,14 @@
 			<p class="title">Favorite Game Type</p>
 			<p class="info"><?php echo $profile['gametype']; ?></p>
 		</div>
+		<div class="list">
+			<ul>
+				<li class="first">Bio</li>
+				<li class="second">Videos</li>
+				<li class="third">Posts</li>
+			</ul>
+		</div>
+
 		<div id="profile_bio">
 			<p class="bio_title">Player Biography</p>
 			<p class="bio"><?php echo $profile['bio']; ?></p>
@@ -92,6 +100,11 @@
 		</div>
 		<div id="profile_post">
 			<h1>Post</h1>
+			<?php foreach($post as $item){
+				echo $item['title'].'</br>';
+				echo $item['post'].'</br>';
+				echo $item['post_id'].'</br></br>';
+			} ?>
 		</div>
 	</section>
 
@@ -118,6 +131,38 @@
 			$('.followBtn').magnificPopup({ 
 			  type: 'inline'
 				// other options
+			});
+
+			$('.first').addClass('activeList');
+
+			$('#profile_video').hide();
+			$('#profile_post').hide();
+
+			$('.first').click(function(){
+				$('.second').removeClass('activeList');
+				$('.third').removeClass('activeList');
+				$('.first').addClass('activeList');
+				$('#profile_bio').show();
+				$('#profile_video').hide();
+				$('#profile_post').hide();
+			});
+
+			$('.second').click(function(){
+				$('.second').addClass('activeList');
+				$('.third').removeClass('activeList');
+				$('.first').removeClass('activeList');
+				$('#profile_bio').hide();
+				$('#profile_video').show();
+				$('#profile_post').hide();
+			});
+
+			$('.third').click(function(){
+				$('.second').removeClass('activeList');
+				$('.third').addClass('activeList');
+				$('.first').removeClass('activeList');
+				$('#profile_bio').hide();
+				$('#profile_video').hide();
+				$('#profile_post').show();
 			});
 		});
 

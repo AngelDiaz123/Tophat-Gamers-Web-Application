@@ -31,6 +31,10 @@ body {
 	padding: 0;
 }
 
+.mfp-close {
+	margin-right: 550px;
+}
+
 /*------- alerts CSS ---------------*/
 .messageAlert{
 		background-size: 40px 40px;
@@ -624,26 +628,47 @@ body {
 
 #profile_bio {
 	float: right;
-	clear: both;
+	clear: right;
 	width: 640px;
+	margin-bottom: 20px;
 }
 
 #profile_video {
+	margin-top: 20px;
+	margin-bottom: 20px;
 	float: right;
-	clear: both;
+	clear: right;
 	width: 640px;
 }
 
 .youtube_video {
-	margin-left: 20px;
-	margin-top: 20px;
+	padding: 10px;
 	float: left;
 }
 
 #profile_post {
+	margin-bottom: 20px;
+	color: white;
 	float: right;
-	clear: both;
+	clear: right;
 	width: 640px;
+}
+
+.list {
+	margin-left: -20px;
+	clear: left;
+	float: left;
+}
+
+.first, .second, .third {
+	cursor: pointer;
+	padding: 10px;
+	padding-left: 20px;
+	width: 220px;
+}
+
+.activeList {
+	background-color: grey;
 }
 
 
@@ -819,6 +844,10 @@ body {
 	border-bottom-color: white;
 }
 
+.profile_error {
+	color: red;
+}
+
 /*------------- Register -----------------*/
 .register_form_div {
 	width: 400px;
@@ -835,11 +864,50 @@ body {
 	margin-right: 200px;
 }
 
-/*------------- Make post ----------------*/
+.dashboard_div {
+	margin: 0 auto;
+	width: 960px;
+}
 
-.user_post {
+.label {
+	font-size: 1.1em;
+}
+
+.user_dash {
+	width: 300px;
+	margin-left: 70px;
+	margin-bottom: 20px;
+}
+
+.email_dash {
+	width: 300px;
+	margin-left: 110px;
+	margin-bottom: 20px;
+}
+
+.youtube_dash {
+	width: 300px;
+	margin-bottom: 20px;
+}
+
+.twitch_dash {
+	width: 300px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+}
+
+.gametype_dash {
+	width: 310px;
+	margin-left: 70px;
+	margin-bottom: 20px;
+}
+
+.update_btn {
+	float: right;
+	margin-right: 170px;
+	font-size: 1.2em;
 	border-radius: 15px;
-	margin-right: 125px;
+	border: none;
 	color: white;
 	background: #ea3200; /* Old browsers */
 	background: -moz-linear-gradient(top, #ea3200 0%, #ef5929 48%, #ea3200 100%); /* FF3.6+ */
@@ -849,11 +917,22 @@ body {
 	background: -ms-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* IE10+ */
 	background: linear-gradient(to bottom, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea3200', endColorstr='#ea3200',GradientType=0 ); /* IE6-9 */
-	clear: left;
-	float: right;
-	width: 300px;
-	overflow: hidden;
+	width: 150px;
+	height: 50px;
 }
+
+.editPost {
+	clear: both;
+	width: 960px;
+	margin: 0 auto;
+}
+
+.dash_img {
+	width: 200px;
+	height: 200px;
+}
+
+/*------------- Make post ----------------*/
 
 .submit_post {
 	margin-top: 15px;
@@ -872,24 +951,18 @@ body {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea3200', endColorstr='#ea3200',GradientType=0 ); /* IE6-9 */
 }
 
-.user_post p {
-	float: left;
-	margin-left: 20px;
-}
-
-.user_post img {
-	margin: 20px;
-	float: left;
-}
-
-.make_post {
-	color: white;
-	margin-left: 150px;
+.create_div {
 	width: 800px;
+	margin: 0 auto;
 }
 
 .post_title {
-	width: 720px;
+	margin-top: 50px;
+	font-family: 'Didact Gothic', sans-serif;
+}
+
+.title_input {
+	width: 800px;
 }
 
 /*------------- Global Footer ------------*/

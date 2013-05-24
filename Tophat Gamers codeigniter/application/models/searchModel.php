@@ -78,7 +78,7 @@
       $this->db->from('users');
       $this->db->join('profile','users.user_id = profile.user_id');
       $this->db->select('bio');
-      $this->db->where('users.user_id',1);
+      $this->db->where('users.user_id',$id);
       $this->db->limit(1);
 
       $query = $this->db->get();

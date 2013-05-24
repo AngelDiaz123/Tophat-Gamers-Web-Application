@@ -4,6 +4,7 @@ class createPost extends CI_Controller {
 
  function __construct(){
     parent::__construct();
+    $this->load->model('user');
  }
 
   function index(){
@@ -14,6 +15,13 @@ class createPost extends CI_Controller {
     }else{
 	  	$this->load->view('welcome_view');
 	  }
+  }
+
+  function savePost($id){
+    $post = $this->input->post('post');
+    $title = $this->input->post('title');
+    $this->user->savePost($id,$post,$title);
+    redirect('dashboard','refresh');
   }
 
 }

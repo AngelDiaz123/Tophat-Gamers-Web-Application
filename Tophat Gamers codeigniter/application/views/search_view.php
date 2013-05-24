@@ -47,9 +47,13 @@
 				<p class="search_drop">Gametype</p>
 				<select class="main_dropdown" name="d">
 					<option value="">Select an Option</option>
-					<option value="FPS">FPS</option>
-					<option value="MMO">MMO</option>
-					<option value="Test">Test</option>
+					<option value="FPS">First Person Shooter</option>
+					<option value="MMO">Massive Multiplayer Online</option>
+					<option value="Sports">Sports</option>
+					<option value="Strategy">Strategy</option>
+					<option value="Arcade">Arcade</option>
+					<option value="Fighter">Fighter</option>
+					<option value="Strategy">Third Person Shooter</option>
 				</select>
 			</div>
 

@@ -5,6 +5,7 @@ class Profile extends CI_Controller {
   function __construct(){
     parent::__construct();
     $this->load->model('searchModel');
+    $this->load->model('user');
     $this->load->helper('url');
   }
 
@@ -15,8 +16,9 @@ class Profile extends CI_Controller {
   function user($userID){
     if($this->session->userdata('logged_in')){
       $profile = $this->searchModel->retrieveUser($userID);
+      $post = $this->user->pullPosts($userID);
       if(sizeof($profile) > 0){
-        $data = array('profile' => $profile);
+        $data = array('profile' => $profile,'post'=>$post);
         $this->load->view('profileLoggedIn_view',$data);
       }else{
         echo "no results";
@@ -24,8 +26,9 @@ class Profile extends CI_Controller {
       }
     }else{
       $profile = $this->searchModel->retrieveUser($userID);
+      $post = $this->user->pullPosts($userID);
       if(sizeof($profile) > 0){
-        $data = array('profile' => $profile);
+        $data = array('profile' => $profile,'post'=>$post);
         $this->load->view('profile_view',$data);
       }else{
         echo "no results";

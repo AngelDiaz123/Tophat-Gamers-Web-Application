@@ -47,6 +47,7 @@
 	   <div class="dashboard_div">
 	   		<h1>Dashboard</h1>
 	   		<img src="<?php echo base_url("$info[user_img]"); ?>" class="dash_img">
+	   		<h3 class="profile_error">The image exceded the width or height or file size recommended please try agian.</h3>
 			<?php echo form_open_multipart("dashboard/editAccount/".$info['user_id']); ?>
 				<label class="label" for="userFile">User Image:</label>
 				<input type="file" class="user_dash" size="20" name="userfile">
