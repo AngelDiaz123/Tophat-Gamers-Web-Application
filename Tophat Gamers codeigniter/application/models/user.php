@@ -83,10 +83,15 @@
       $this->db->select('post, title, post_id');
       $this->db->from('blogs');
       $this->db->where('post_id',$post_id);
-      $this->db->limit(1);
 
       $query = $this->db->get();
-      return $query->result();
+      return $query->result_array();
+    }
+
+    function updateBlog($title, $blog, $post_id){
+      $data = array('post'=>$blog,'title'=>$title);
+      $this->db->where('post_id', $post_id);
+      $this->db->update('blogs', $data);
     }
   }
 ?>

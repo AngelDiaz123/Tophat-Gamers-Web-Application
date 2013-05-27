@@ -82,11 +82,14 @@
 			</form>
 		</div>
 		<div class="editPost">
-			<?php foreach($post as $item){
-				echo $item['title'].'</br>';
-				echo $item['post'].'</br>';
-				echo $item['post_id'].'</br></br>';
-			} ?>
+			<h1>Edit Posts</h1>
+			<?php foreach($post as $item){ ?>
+				<div class="blog_container">
+					<a class="edit_title" href="<?php echo base_url("index.php/post/editBlog/$item[post_id]"); ?>">
+					<?php echo $item['title'].'</a></br>';
+					echo $item['post'].'</br>'; ?>
+				</div>
+			<?php } ?>
 		</div>
 
 
@@ -129,7 +132,7 @@
 			tinymce.init({
 				selector:'textarea',
 				plugins: "image",
-				width: 800,
+				width: 650,
 				height: 500,
 				browser_spellcheck: true,
 				resize: false,

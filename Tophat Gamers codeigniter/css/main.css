@@ -117,7 +117,7 @@ body {
 }
 
 .search_link {
-	margin-left: 450px;
+	margin-left: 410px;
 	margin-top: 40px;
 }
 
@@ -161,7 +161,7 @@ body {
 }
 
 .top_logo {
-	margin-left: 240px;
+	margin-left: 200px;
 	float: left;
 	position: absolute;
 	width: 70px;
@@ -511,6 +511,8 @@ body {
 }
 
 .basic_profile {
+	width: 75px;
+	height: 75px;
 	margin-top: 10px;
 	margin-left: 15px;
 }
@@ -615,7 +617,8 @@ body {
 }
 
 .bio_title {
-	font-family: 'Didact Gothic', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
 	font-size: 1.5em;
 	padding-bottom: 5px;
 	clear: both;
@@ -627,15 +630,17 @@ body {
 }
 
 #profile_bio {
+	line-height: 1.5em;
 	float: right;
 	clear: right;
 	width: 640px;
+	margin-right: 30px;
 	margin-bottom: 20px;
 }
 
 #profile_video {
-	margin-top: 20px;
 	margin-bottom: 20px;
+	margin-right: 30px;
 	float: right;
 	clear: right;
 	width: 640px;
@@ -648,6 +653,7 @@ body {
 
 #profile_post {
 	margin-bottom: 20px;
+	margin-right: 30px;
 	color: white;
 	float: right;
 	clear: right;
@@ -669,6 +675,12 @@ body {
 
 .activeList {
 	background-color: grey;
+}
+
+.blogTitle_link {
+	margin-top: 80px;
+	color: #ea3200;
+	font-size: 1.7em;
 }
 
 
@@ -761,91 +773,14 @@ body {
 
 /*------------- Post Page ----------------*/
 
-.post_content {
-	margin-left: 150px;
-	color: white;
-	width: 800px;
+.post_div {
+	width: 600px;
+	margin: 0 auto;
 }
 
-.user_pro {
-	border-radius: 15px;
-	margin-right: 125px;
-	color: white;
-	background: #ea3200; /* Old browsers */
-	background: -moz-linear-gradient(top, #ea3200 0%, #ef5929 48%, #ea3200 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ea3200), color-stop(48%,#ef5929), color-stop(100%,#ea3200)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* IE10+ */
-	background: linear-gradient(to bottom, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea3200', endColorstr='#ea3200',GradientType=0 ); /* IE6-9 */
-	clear: left;
-	float: right;
-	width: 300px;
-	overflow: hidden;
-}
-
-.user_pro p {
-	float: left;
-	margin-left: 20px;
-}
-
-.user_pro img {
-	margin: 20px;
-	float: left;
-}
-
-.comment_div {
-	color: white;
-	border-radius: 15px;
-	padding: 20px;
-	background-color: #AF7A69;
-	margin-top: 50px;
-	margin-left: 130px;
-	width: 800px;	
-}
-
-.comment_div form {
-	border-radius: 15px;
-	margin: 10px;
-	background-color: #865e51;
-}
-
-.comment_input {
-	margin-bottom: 10px;
-	margin-left: 10px;
-	width: 650px;
-}
-
-.comment_btn {
-	font-size: .75em;
-	border-radius: 15px;
-	border: none;
-	color: white;
-	background: #ea3200; /* Old browsers */
-	background: -moz-linear-gradient(top, #ea3200 0%, #ef5929 48%, #ea3200 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ea3200), color-stop(48%,#ef5929), color-stop(100%,#ea3200)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* IE10+ */
-	background: linear-gradient(to bottom, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea3200', endColorstr='#ea3200',GradientType=0 ); /* IE6-9 */
-}
-
-.comment_header {
-	padding-top: 10px;
-	margin-left: 10px;
-}
-
-.comment_content {
-	padding-bottom: 20px; 
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: white;
-}
-
-.profile_error {
-	color: red;
+.blog_info {
+	font-size: 1em;
+	letter-spacing: .07em;
 }
 
 /*------------- Register -----------------*/
@@ -866,7 +801,7 @@ body {
 
 .dashboard_div {
 	margin: 0 auto;
-	width: 960px;
+	width: 800px;
 }
 
 .label {
@@ -923,8 +858,11 @@ body {
 
 .editPost {
 	clear: both;
-	width: 960px;
-	margin: 0 auto;
+	width: 600px;
+	margin-left: 320px;
+	margin-top: 100px;
+	line-height: 1.2em;
+	letter-spacing: .07em;
 }
 
 .dash_img {
@@ -932,9 +870,19 @@ body {
 	height: 200px;
 }
 
+.edit_title {
+	color: #ea3200;
+	font-size: 1.7em;
+
+}
+
+.blog_container {
+	margin-top: 50px;
+}
+
 /*------------- Make post ----------------*/
 
-.submit_post {
+.submit_post, .updateBlog_btn {
 	margin-top: 15px;
 	font-size: 1em;
 	border: none;
@@ -963,6 +911,18 @@ body {
 
 .title_input {
 	width: 800px;
+}
+
+.editBlog_title {
+	font-size: 1.2em;
+	height: 30px;
+	width: 600px;
+}
+
+.updateBlog_btn {
+	float: right;
+	margin-bottom: 50px;
+	margin-top: 20px;
 }
 
 /*------------- Global Footer ------------*/

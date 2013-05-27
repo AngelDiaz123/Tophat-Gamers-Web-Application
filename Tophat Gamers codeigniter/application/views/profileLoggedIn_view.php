@@ -70,10 +70,12 @@
 		<div id="profile_post">
 			<h1>Post</h1>
 			<?php foreach($post as $item){ ?>
-				<a href="<?php echo base_url("index.php/post/blog/$item[post_id]"); ?>">
-				<?php echo $item['title'].'</a></br>';
-				echo $item['post'].'</br>';
-			} ?>
+				<div class="blog_container">
+					<a class="blogTitle_link" href="<?php echo base_url("index.php/post/blog/$item[post_id]"); ?>">
+					<?php echo $item['title'].'</a></br>';
+					echo $item['post'].'</br>'; ?>
+				</div>
+			<?php } ?>
 		</div>
 	</section>
 

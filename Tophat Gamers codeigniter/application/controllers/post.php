@@ -5,6 +5,7 @@ class post extends CI_Controller {
  function __construct()
  {
    parent::__construct();
+   $this->load->helper(array('form', 'url'));
    $this->load->model('user');
  }
 
@@ -15,11 +16,32 @@ class post extends CI_Controller {
   function blog($id){
     if($this->session->userdata('logged_in')){
       $blog = $this->user->pullBlog($id);
-
+      $data = array('blog'=>$blog);
+      $this->load->view('postLoggedIn_view',$data);
     }else{
-      //If no session, redirect to login page
-      redirect('welcome', 'refresh');
+      $blog = $this->user->pullBlog($id);
+      $data = array('blog'=>$blog[0]);
+      $this->load->view('post_view',$data);
     }
+  }
+
+  function editBlog($id){
+    if($this->session->userdata('logged_in')){
+      $blog = $this->user->pullBlog($id);
+      $data = array('blog'=>$blog);
+      $this->load->view('editPost_view',$data);
+    }else{
+      $this->load->view('welcome_view');
+    }
+  }
+
+  function updateBlog(){
+    $title = $this->input->post('title');
+    $blog = $this->input->post('blog');
+    $post_id = $this->input->post('post_id');
+
+    $this->user->updateBlog($title,$blog,$post_id);
+    redirect('dashboard','refresh');
   }
 
 }

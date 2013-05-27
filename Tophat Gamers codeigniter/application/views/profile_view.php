@@ -72,9 +72,9 @@
 
 	<section class="profile_div">
 		<div class="profile_buttons">
-			<a class="msgBtn" href="#message"><button class="message">Message</button></a>
+			<a class="msgBtn" href="#message_form"><button class="message">Message</button></a>
 			<a href="<?php echo base_url("index.php/stream/user/$profile[twitch_username]"); ?>" target="_blank"><button class="stream">Watch Stream</button></a>
-			<a class="followBtn" href="#follow"><button>Follow</button></a>
+			<button>Follow</button>
 		</div>
 		<div id="profile_top">
 			<img src="<?php echo base_url("$profile[user_img]"); ?>" class="profile_img">
@@ -100,11 +100,13 @@
 		</div>
 		<div id="profile_post">
 			<h1>Post</h1>
-			<?php foreach($post as $item){
-				echo $item['title'].'</br>';
-				echo $item['post'].'</br>';
-				echo $item['post_id'].'</br></br>';
-			} ?>
+			<?php foreach($post as $item){ ?>
+				<div class="blog_container">
+					<a class="blogTitle_link" href="<?php echo base_url("index.php/post/blog/$item[post_id]"); ?>">
+					<?php echo $item['title'].'</a></br>';
+					echo $item['post'].'</br>'; ?>
+				</div>
+			<?php } ?>
 		</div>
 	</section>
 
