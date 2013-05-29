@@ -11,6 +11,7 @@
 </head>
 <body>
 	<div class="top">
+		<div class="nav_holder">
 			<a href="<?php echo base_url('index.php/search'); ?>" class="logo_link"><img src="<?php echo base_url('images/tophatGamers.png') ?>" class="top_logo"></a>
 			<header>
 				<a href="<?php echo base_url('index.php/search'); ?>" class="search_link navigation onPage">Search</a>
@@ -23,7 +24,8 @@
 				<a class="logout_link navigation" href="<?php echo base_url('index.php/dashboard/logout'); ?>">Logout</a>
 			</header>
 		</div>
-		<div class="top_banner"></div>
+	</div>
+	<div class="top_banner"></div>
 
 	<!-- a search form for username or email or gametype -->
 	<section class="search_div">

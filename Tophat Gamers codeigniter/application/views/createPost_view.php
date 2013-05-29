@@ -12,17 +12,19 @@
 </head>
 <body>
 	<div class="top">
-		<a href="<?php echo base_url('index.php/search'); ?>" class="logo_link"><img src="<?php echo base_url('images/tophatGamers.png') ?>" class="top_logo"></a>
-		<header>
-			<a href="<?php echo base_url('index.php/search'); ?>" class="search_link navigation">Search</a>
-			<span class="line">|</span>
-			<a class="dashboard_link navigation" href="<?php echo base_url('index.php/dashboard/'); ?>">Dashboard</a>
-			<span class="line">|</span>
-			<a class="create_link navigation onPage" href="<?php echo base_url('index.php/createPost'); ?>">Create a Post</a>
-			<span class="line">|</span>
-			<a class="read_link navigation" href="<?php echo base_url('index.php/readMail'); ?>">Mail</a>
-			<a class="logout_link navigation" href="<?php echo base_url('index.php/dashboard/logout'); ?>">Logout</a>
-		</header>
+		<div class="nav_holder">
+			<a href="<?php echo base_url('index.php/search'); ?>" class="logo_link"><img src="<?php echo base_url('images/tophatGamers.png') ?>" class="top_logo"></a>
+			<header>
+				<a href="<?php echo base_url('index.php/search'); ?>" class="search_link navigation">Search</a>
+				<span class="line">|</span>
+				<a class="dashboard_link navigation" href="<?php echo base_url('index.php/dashboard/'); ?>">Dashboard</a>
+				<span class="line">|</span>
+				<a class="create_link navigation onPage" href="<?php echo base_url('index.php/createPost'); ?>">Create a Post</a>
+				<span class="line">|</span>
+				<a class="read_link navigation" href="<?php echo base_url('index.php/readMail'); ?>">Mail</a>
+				<a class="logout_link navigation" href="<?php echo base_url('index.php/dashboard/logout'); ?>">Logout</a>
+			</header>
+		</div>
 	</div>
 	<div class="top_banner"></div>
 

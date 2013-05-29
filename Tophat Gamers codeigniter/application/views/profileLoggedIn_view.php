@@ -11,16 +11,21 @@
 </head>
 <body>
 	<div class="top">
+		<div class="nav_holder">
 		<div class="login_form" style="color:white;">
 			<?php
 				// hidden login form
 				$attributes = array('id'=>'message_form','class'=>'white-popup-block','class'=>'mfp-hide'); 
 				echo form_open('messageuser',$attributes); ?>
 				<div class="login_form_div">
-					<h1>Message <?php echo $profile['username']; ?></h1>
-				    <label for="message">Message:</label>
-				    <textarea rows="15" cols="39" class="message_user" name="message"></textarea>
+					<h3>Message <?php echo $profile['username']; ?></h3>
+					<label for="message">Title:</label>
+				    <input type="text" name="title">
 				    <br/>
+				    <label for="message">Message:</label>
+				    <textarea rows="15" cols="25" class="message_user" name="message"></textarea>
+				    <br/>
+				    <input type="hidden" value="<?php echo $profile['user_id']; ?>" name="user_id">
 				    <input type="submit" value="Message">
 				</div>
 			</form>
@@ -37,7 +42,8 @@
 				<a class="logout_link navigation" href="<?php echo base_url('index.php/dashboard/logout'); ?>">Logout</a>
 			</header>
 		</div>
-		<div class="top_banner"></div>
+	</div>
+	<div class="top_banner"></div>
 
 	<section class="profile_div">
 		<div class="profile_buttons">

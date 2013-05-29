@@ -101,8 +101,6 @@
       }else{
         return $results[0];
       }
-
-      // return $results[0];
     }
   }
 ?>

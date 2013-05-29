@@ -94,5 +94,9 @@
       $this->db->where('post_id', $post_id);
       $this->db->update('blogs', $data);
     }
+
+    function messageUser($message, $title, $user_id, $messenger){
+      
+    }
   }
 ?>

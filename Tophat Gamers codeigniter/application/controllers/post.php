@@ -20,7 +20,7 @@ class post extends CI_Controller {
       $this->load->view('postloggedin_view',$data);
     }else{
       $blog = $this->user->pullBlog($id);
-      $data = array('blog'=>$blog[0]);
+      $data = array('blog'=>$blog);
       $this->load->view('post_view',$data);
     }
   }

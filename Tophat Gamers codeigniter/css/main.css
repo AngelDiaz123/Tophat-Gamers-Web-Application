@@ -117,7 +117,7 @@ body {
 }
 
 .search_link {
-	margin-left: 410px;
+	margin-left: 50px;
 	margin-top: 40px;
 }
 
@@ -161,9 +161,7 @@ body {
 }
 
 .top_logo {
-	margin-left: 200px;
 	float: left;
-	position: absolute;
 	width: 70px;
 	height: 100px;
 }
@@ -201,6 +199,11 @@ body {
 	width: 50px;
 	height: 30px;
 	font-size: .85em;
+}
+
+.nav_holder {
+	width: 960px;
+	margin: 0 auto;
 }
 
 /*----- Home Page ------------*/
@@ -817,7 +820,7 @@ body {
 	font-size: 1.2em;
 	float: right;
 	margin-top: 40px;
-	margin-right: 200px;
+	margin-right: 60px;
 }
 
 .dashboard_div {

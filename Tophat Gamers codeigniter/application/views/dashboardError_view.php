@@ -16,11 +16,12 @@
 			<p>Welcome Back <?php echo $info['username']; ?>!</p>
 		</div> -->
  		<div class="top">
+		<div class="nav_holder">
 			<a href="<?php echo base_url('index.php/search'); ?>" class="logo_link"><img src="<?php echo base_url('images/tophatGamers.png') ?>" class="top_logo"></a>
 			<header>
 				<a href="<?php echo base_url('index.php/search'); ?>" class="search_link navigation">Search</a>
 				<span class="line">|</span>
-				<a class="dashboard_link navigation onPage" href="<?php echo base_url('index.php/dashboard/'); ?>">Dashboard</a>
+				<a class="dashboard_link navigation" href="<?php echo base_url('index.php/dashboard/'); ?>">Dashboard</a>
 				<span class="line">|</span>
 				<a class="create_link navigation" href="<?php echo base_url('index.php/createPost'); ?>">Create a Post</a>
 				<span class="line">|</span>
@@ -28,7 +29,8 @@
 				<a class="logout_link navigation" href="<?php echo base_url('index.php/dashboard/logout'); ?>">Logout</a>
 			</header>
 		</div>
-		<div class="top_banner"></div>
+	</div>
+	<div class="top_banner"></div>
 	 	<!-- <div class="infoAlert messageAlert">
 				 <h3>FYI, something just happened!</h3>
 				 <p>This is just an info notification message.</p>
