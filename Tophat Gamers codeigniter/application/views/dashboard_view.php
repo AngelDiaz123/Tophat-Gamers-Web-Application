@@ -11,10 +11,10 @@
 	<script src="//tinymce.cachefly.net/4.0/tinymce.min.js"></script>
 </head>
  	<body>
- 		<div class="successAlert messageAlert">
+ 		<!-- <div class="successAlert messageAlert">
 			<h3>You Logged In</h3>
 			<p>Welcome Back <?php echo $info['username']; ?>!</p>
-		</div>
+		</div> -->
  		<div class="top">
 		<div class="nav_holder">
 			<a href="<?php echo base_url('index.php/search'); ?>" class="logo_link"><img src="<?php echo base_url('images/tophatGamers.png') ?>" class="top_logo"></a>

@@ -91,5 +91,19 @@
       $data = array('message'=>$message, 'title'=>$title, 'user_id'=>$user_id, 'mailer_id'=>$messenger);
       $this->db->insert('mail',$data);
     }
+
+    function readMail($id){
+      $this->db->select('mailer_id, message, title');
+      $this->db->from('mail');
+      $this->db->where('user_id', $id);
+      $query = $this->db->get();
+
+      if($query->num_rows() > 0){
+        $result = $query->result_array();
+        return $result;
+      }else{
+        return false;
+      }
+    }
   }
 ?>

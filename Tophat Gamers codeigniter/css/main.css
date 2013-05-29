@@ -137,7 +137,7 @@ body {
 }
 
 .onPage {
-	color: grey;
+	color: #ea5829;
 }
 
 .top_login_button {
@@ -947,6 +947,67 @@ body {
 	float: right;
 	margin-bottom: 50px;
 	margin-top: 20px;
+}
+
+/*------------- Read Messages ------------*/
+.mail_div {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.list_mail {
+	height: 300px;
+}
+
+.read_messages {
+	height: 400px;
+}
+
+.mail_top {
+	padding: 0;
+	margin: 0;
+	width: 965px;
+	overflow: hidden;
+	background-color: grey;
+}
+
+.list_title {
+	border-right-style: solid;
+	border-right-color: black;
+	border-right-width: 1px;
+	float: left;
+	margin-left: 10px;
+	width: 300px;
+}
+
+.list_message {
+	float: left;
+	margin-left: 10px;
+	width: 630px;
+}
+
+.message_content {
+	border-style: solid;
+	border-color: black;
+	border-width: 2px; 
+	width: 960px;
+	overflow: hidden;
+	background: #ea5829;
+}
+
+.content_title {
+	border-right-style: solid;
+	border-right-color: black;
+	border-right-width: 1px;
+	margin-left: 10px;
+	float: left;
+	width: 300px;
+}
+
+.content_message {
+	float: left;
+	margin-left: 10px; 
+	width: 630px;
 }
 
 /*------------- Global Footer ------------*/
