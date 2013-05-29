@@ -44,14 +44,6 @@
       }
     }
 
-    function pullUserInfo($id){
-      $this->db->select('email, users.user_id, username, youtube_username, twitch_username, gametype, bio, user_img');
-      $this->db->from('users, profile');
-      $this->db->where('users.user_id',$id);
-      $query = $this->db->get();
-      return $query->result_array();
-    }
-
     function pullPosts($id){
       $this->db->select('post, title, post_id');
       $this->db->from('blogs');
@@ -96,7 +88,8 @@
     }
 
     function messageUser($message, $title, $user_id, $messenger){
-      
+      $data = array('message'=>$message, 'title'=>$title, 'user_id'=>$user_id, 'mailer_id'=>$messenger);
+      $this->db->insert('mail',$data);
     }
   }
 ?>

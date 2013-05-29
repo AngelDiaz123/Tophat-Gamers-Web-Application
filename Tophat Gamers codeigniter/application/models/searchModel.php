@@ -76,7 +76,7 @@
 
     // a ajax search for a profile
     function retrieveUser($id){
-      $this->db->select('username, users.user_id, user_img, gametype, twitch_username, youtube_username');
+      $this->db->select('username, email, users.user_id, user_img, gametype, twitch_username, youtube_username');
       $this->db->from('users');
       $this->db->join('profile','users.user_id = profile.user_id');
       $this->db->select('bio');
@@ -86,7 +86,7 @@
       $results = $query->result_array();
 
       if(!$results){
-        $this->db->select('username, user_id, user_img, gametype, twitch_username, youtube_username');
+        $this->db->select('username, email, user_id, user_img, gametype, twitch_username, youtube_username');
         $this->db->from('users');
         $this->db->where('user_id', $id);
         $q = $this->db->get();

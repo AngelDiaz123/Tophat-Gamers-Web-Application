@@ -5,6 +5,7 @@ class Dashboard extends CI_Controller {
  function __construct()
  {
    parent::__construct();
+   $this->load->model('searchModel');
    $this->load->model('user');
    $this->load->helper(array('form', 'url'));
  }
@@ -14,9 +15,9 @@ class Dashboard extends CI_Controller {
     if($this->session->userdata('logged_in')){
 
       $session_data = $this->session->userdata('logged_in');
-      $info = $this->user->pullUserInfo($session_data['id']);
+      $info = $this->searchModel->retrieveUser($session_data['id']);
       $post = $this->user->pullPosts($session_data['id']);
-      $data = array('info' => $info[0],'post'=>$post);
+      $data = array('info' => $info,'post'=>$post);
       $this->load->view('dashboard_view', $data);
 
     }else{
@@ -32,44 +33,54 @@ class Dashboard extends CI_Controller {
    }
 
   function editAccount($id){
-    $userID = $id;
-    $username = $this->input->post('username');
-    $email = $this->input->post('email');
-    $youtube = $this->input->post('youtube');
-    $gametype = $this->input->post('gametype');
-    $twitch = $this->input->post('twitch');
-    $bio = $this->input->post('bio');
-    if(isset($_FILES['userfile']) && $_FILES['userfile']['size'] > 0){
+    if($this->session->userdata('logged_in')){
+      $userID = $id;
+      $username = $this->input->post('username');
+      $email = $this->input->post('email');
+      $youtube = $this->input->post('youtube');
+      $gametype = $this->input->post('gametype');
+      $twitch = $this->input->post('twitch');
+      $bio = $this->input->post('bio');
+      if(isset($_FILES['userfile']) && $_FILES['userfile']['size'] > 0){
 
 
-      $config['upload_path'] = 'uploads';
-      $config['allowed_types'] = 'jpg|gif|png';
-      $config['max_size'] = '2048';
-      $config['max_width'] = '1920';
-      $config['max_height'] = '1080';
+        $config['upload_path'] = 'uploads';
+        $config['allowed_types'] = 'jpg|gif|png';
+        $config['max_size'] = '2048';
+        $config['max_width'] = '1920';
+        $config['max_height'] = '1080';
 
-      $this->load->library('upload', $config);
+        $this->load->library('upload', $config);
 
-      if ( ! $this->upload->do_upload())
-      {
-        $info = $this->user->pullUserInfo($userID);
-        $post = $this->user->pullPosts($userID);
-        $data = array('info' => $info[0],'post'=>$post);
-        $this->load->view('dashboarderror_view', $data);
-      }
-      else
-      {
-        $data = $this->upload->data();
-        $userImg = "uploads/".$data['raw_name'].$data['file_ext'];
-        $this->user->updateImg($userID,$userImg);
+        if ( ! $this->upload->do_upload())
+        {
+          $info = $this->searchModel->retrieveUser($userID);
+          $post = $this->user->pullPosts($userID);
+          $data = array('info' => $info,'post'=>$post);
+          $this->load->view('dashboarderror_view', $data);
+        }
+        else
+        {
+          $data = $this->upload->data();
+          $userImg = "uploads/".$data['raw_name'].$data['file_ext'];
+          $this->user->updateImg($userID,$userImg);
+          $this->user->updateUser($userID, $username, $email, $youtube, $twitch, $gametype, $bio);
+          $info = $this->searchModel->retrieveUser($userID);
+          $post = $this->user->pullPosts($userID);
+          $data = array('info' => $info,'post'=>$post);
+          $this->load->view('dashboardsuccess_view', $data);
+        }
+
+      }else{
+
         $this->user->updateUser($userID, $username, $email, $youtube, $twitch, $gametype, $bio);
-        redirect('dashboard', 'refresh');
+        $info = $this->searchModel->retrieveUser($userID);
+        $post = $this->user->pullPosts($userID);
+        $data = array('info' => $info,'post'=>$post);
+        $this->load->view('dashboardsuccess_view', $data);
       }
-
     }else{
-
-      $this->user->updateUser($userID, $username, $email, $youtube, $twitch, $gametype, $bio);
-      redirect('dashboard', 'refresh');
+      redirect('welcome', 'refresh');
     }
   }
 

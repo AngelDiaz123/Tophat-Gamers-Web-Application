@@ -12,8 +12,8 @@
 </head>
  	<body>
  		<div class="successAlert messageAlert">
-			<h3>You Logged In</h3>
-			<p>Welcome Back <?php echo $info['username']; ?>!</p>
+			<h3>Updated Account</h3>
+			<p>Thank you for updating</p>
 		</div>
  		<div class="top">
 		<div class="nav_holder">
