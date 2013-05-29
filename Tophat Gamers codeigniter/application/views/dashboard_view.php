@@ -78,20 +78,38 @@
 				</select>
 				</br>
 				<label class="label" for="bio">Your Bio:</label>
-				<textarea name="bio"><?php echo $info['bio']; ?></textarea>
+				<textarea name="bio"><?php if(isset($info['bio'])){
+												echo $info['bio'];
+											}else{
+											} ?></textarea>
 				<br/>
 				<input type="submit" value="Update" class="update_btn">
 			</form>
 		</div>
 		<div class="editPost">
 			<h1>Edit Posts</h1>
-			<?php foreach($post as $item){ ?>
+			<?php
+			if(sizeof($post) > 0){
+				foreach($post as $item){ ?>
 				<div class="blog_container">
 					<a class="edit_title" href="<?php echo base_url("index.php/post/editBlog/$item[post_id]"); ?>">
 					<?php echo $item['title'].'</a></br>';
 					echo $item['post'].'</br>'; ?>
 				</div>
-			<?php } ?>
+			<?php }
+			}else{
+				echo "No blogs made yet";
+			}?>
+		</div>
+
+		<div class="all_footer_banner"></div>
+		<div class="footer_background">
+			<footer>
+				<a href="#" class="about">About Us</a>
+				<a href="#" class="contact">Contact Us</a>
+				<a href="#" class="faq">FAQs</a>
+				<p class="copyright">&copy; 2013 Angel Productions</p>
+			</footer>
 		</div>
 
 
