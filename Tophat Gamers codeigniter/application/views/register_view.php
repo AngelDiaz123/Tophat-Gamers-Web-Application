@@ -22,7 +22,7 @@
 	<div class="register_form_div">
 		<h1>Register</h1>
 		<?php echo validation_errors(); ?>
-		<?php echo form_open('registerUser'); ?>
+		<?php echo form_open('registeruser'); ?>
 			<label for="username">Username:</label>
 			<input type="text" size="20" class="username_register" name="username">
 			<br/>

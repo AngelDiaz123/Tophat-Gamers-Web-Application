@@ -37,7 +37,7 @@
 			<?php
 				// for the search form
 				$attributes = array("class"=>'search_form');
-				echo form_open('searchHome', $attributes); ?>
+				echo form_open('searchhome', $attributes); ?>
 				<input type="text" name="search_input" id="search_input" class="search_input" placeholder="Ex. JohnDoe or JohnDoe@email.com">
 				<input type="submit" class="search_button" value="SEARCH">
 			</form>

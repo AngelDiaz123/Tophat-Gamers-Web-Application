@@ -34,7 +34,7 @@ class search extends CI_Controller {
           $data = array('info' => $info);
 
         }
-         $this->load->view('searchLoggedIn_view',$data);
+         $this->load->view('searchloggedin_view',$data);
 
       // if username is empty and gametype isn't
       }else if($user != 'Ex. JohnDoe or JohnDoe@email.com' && $type != ''){
@@ -42,7 +42,7 @@ class search extends CI_Controller {
         // search by gametype
         $info = $this->searchModel->searchType($type);
         $data = array('info' => $info);
-        $this->load->view('searchLoggedIn_view',$data);
+        $this->load->view('searchloggedin_view',$data);
 
       // search by username only
       }else if($user != '' && $user != 'Ex. JohnDoe or John@email.com'){
@@ -60,14 +60,14 @@ class search extends CI_Controller {
         }
 
         // to load the view and send the data
-        $this->load->view('searchLoggedIn_view',$data);
+        $this->load->view('searchloggedin_view',$data);
 
       }else{
 
         // load all users
         $info = $this->searchModel->search();
         $data = array('info' => $info);
-        $this->load->view('searchLoggedIn_view',$data);
+        $this->load->view('searchloggedin_view',$data);
       }
 
     }else{

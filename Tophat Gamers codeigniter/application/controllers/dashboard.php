@@ -55,7 +55,7 @@ class Dashboard extends CI_Controller {
         $info = $this->user->pullUserInfo($userID);
         $post = $this->user->pullPosts($userID);
         $data = array('info' => $info[0],'post'=>$post);
-        $this->load->view('dashboardError_view', $data);
+        $this->load->view('dashboarderror_view', $data);
       }
       else
       {
@@ -63,13 +63,13 @@ class Dashboard extends CI_Controller {
         $userImg = "uploads/".$data['raw_name'].$data['file_ext'];
         $this->user->updateImg($userID,$userImg);
         $this->user->updateUser($userID, $username, $email, $youtube, $twitch, $gametype, $bio);
-        redirect('Dashboard', 'refresh');
+        redirect('dashboard', 'refresh');
       }
 
     }else{
 
       $this->user->updateUser($userID, $username, $email, $youtube, $twitch, $gametype, $bio);
-      redirect('Dashboard', 'refresh');
+      redirect('dashboard', 'refresh');
     }
   }
 

@@ -19,8 +19,9 @@ class Profile extends CI_Controller {
       $post = $this->user->pullPosts($userID);
       if(sizeof($profile) > 0){
         $data = array('profile' => $profile,'post'=>$post);
-        $this->load->view('profileLoggedIn_view',$data);
+        $this->load->view('profileloggedin_view',$data);
       }else{
+        var_dump($profile);
         //redirect to the 404 page instead
       }
     }else{

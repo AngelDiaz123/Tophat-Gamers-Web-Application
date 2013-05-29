@@ -17,7 +17,7 @@ class post extends CI_Controller {
     if($this->session->userdata('logged_in')){
       $blog = $this->user->pullBlog($id);
       $data = array('blog'=>$blog);
-      $this->load->view('postLoggedIn_view',$data);
+      $this->load->view('postloggedin_view',$data);
     }else{
       $blog = $this->user->pullBlog($id);
       $data = array('blog'=>$blog[0]);
@@ -29,7 +29,7 @@ class post extends CI_Controller {
     if($this->session->userdata('logged_in')){
       $blog = $this->user->pullBlog($id);
       $data = array('blog'=>$blog);
-      $this->load->view('editPost_view',$data);
+      $this->load->view('editpost_view',$data);
     }else{
       $this->load->view('welcome_view');
     }

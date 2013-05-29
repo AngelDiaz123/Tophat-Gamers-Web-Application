@@ -81,11 +81,28 @@
       $this->db->join('profile','users.user_id = profile.user_id');
       $this->db->select('bio');
       $this->db->where('users.user_id',$id);
-      $this->db->limit(1);
 
       $query = $this->db->get();
       $results = $query->result_array();
-      return $results[0];
+
+      if(!$results){
+        $this->db->select('username, user_id, user_img, gametype, twitch_username, youtube_username');
+        $this->db->from('users');
+        $this->db->where('user_id', $id);
+        $q = $this->db->get();
+
+        if($q->num_rows() > 0){
+          $user = $q->result_array();
+          return $user[0];
+        }else{
+          return false;
+        }
+
+      }else{
+        return $results[0];
+      }
+
+      // return $results[0];
     }
   }
 ?>
