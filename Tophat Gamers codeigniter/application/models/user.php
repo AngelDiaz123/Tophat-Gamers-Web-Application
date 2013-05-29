@@ -31,6 +31,7 @@
         return false;
       }else{
         $data = array('username'=>$username,'email'=>$email,'password'=>MD5($password),'user_img'=>"images/basic_profile.jpg");
+        $profile = array();
         $this->db->insert('users', $data);
         $this->db->select('user_id, username, password');
         $this->db->from('users');

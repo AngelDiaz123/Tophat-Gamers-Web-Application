@@ -17,13 +17,14 @@
 				$attributes = array('id'=>'login_search','class'=>'white-popup-block','class'=>'mfp-hide'); 
 				echo form_open('verifylogin',$attributes); ?>
 				<div class="login_form_div">
+					<h3>Login</h3>
 				    <label for="username">Username:</label>
 				    <input type="text" size="20" class="username_login" name="username">
 				    <br/>
 				    <label for="password">Password:</label>
 				    <input type="password" size="20" class="password_login" name="password">
 				    <br/>
-				    <input type="submit" value="Login">
+				    <input type="submit" value="Login" class="loginModule_btn">
 				</div>
 			</form>
 		</div>
@@ -91,9 +92,11 @@
 			$('.extra').click(function(){
 				if($('.extra').hasClass('active')){
 					$('.extra').removeClass('active');
+					$('.extra').html('<<');
 					$('.extra_options').show();
 				}else{
 					$('.extra').addClass('active');
+					$('.extra').html('>>');
 					$('.extra_options').hide();
 				}
 			});

@@ -21,7 +21,6 @@ class Profile extends CI_Controller {
         $data = array('profile' => $profile,'post'=>$post);
         $this->load->view('profileLoggedIn_view',$data);
       }else{
-        echo "no results";
         //redirect to the 404 page instead
       }
     }else{
@@ -31,7 +30,6 @@ class Profile extends CI_Controller {
         $data = array('profile' => $profile,'post'=>$post);
         $this->load->view('profile_view',$data);
       }else{
-        echo "no results";
         //redirect to the 404 page instead
       }
     }

@@ -5,12 +5,32 @@
 	<link href="<?php echo base_url('images/favicon.ico') ?>" rel="icon" type="image/x-icon" />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Didact+Gothic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/main.css'); ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('magnific-popup/magnific-popup.css'); ?>">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="<?php echo base_url('magnific-popup/jquery.magnific-popup.js'); ?>"></script>
 </head>
 <body>
 	<div class="top">
-		<a href="#" class="logo_link"><img src="<?php echo base_url('images/tophatGamers.png'); ?>" class="top_logo"></a>
+		<div class="login_form" style="color:white;">
+			<?php
+				// hidden login form
+				$attributes = array('id'=>'login_stream','class'=>'white-popup-block','class'=>'mfp-hide'); 
+				echo form_open('verifylogin',$attributes); ?>
+				<div class="login_form_div">
+					<h3>Login</h3>
+				    <label for="username">Username:</label>
+				    <input type="text" size="20" class="username_login" name="username">
+				    <br/>
+				    <label for="password">Password:</label>
+				    <input type="password" size="20" class="password_login" name="password">
+				    <br/>
+				    <input type="submit" value="Login" class="loginModule_btn">
+				</div>
+			</form>
+		</div>
+		<a href="<?php echo base_url('index.php/search'); ?>" class="logo_link"><img src="<?php echo base_url('images/tophatGamers.png'); ?>" class="top_logo"></a>
 		<header>
-			<button class="top_login_button">Log In</button>
+			<a class="popup" href="#login_stream"><button class="top_login_button">Log In</button></a>
 			<a href="<?php echo base_url('index.php/register'); ?>" class="top_register_link">Register</a>
 		</header>
 	</div>
@@ -60,6 +80,15 @@
 			<p class="copyright">&copy; 2013 Angel Productions</p>
 		</footer>
 	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.popup').magnificPopup({ 
+			  type: 'inline'
+				// other options
+			});
+		});
+	</script>
 
 	<!-- google analytics -->
 	   <script>

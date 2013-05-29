@@ -77,9 +77,11 @@
 			$('.extra').click(function(){
 				if($('.extra').hasClass('active')){
 					$('.extra').removeClass('active');
+					$('.extra').html('<<');
 					$('.extra_options').show();
 				}else{
 					$('.extra').addClass('active');
+					$('.extra').html('>>');
 					$('.extra_options').hide();
 				}
 			});

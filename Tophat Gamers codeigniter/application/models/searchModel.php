@@ -2,9 +2,11 @@
   Class searchModel extends CI_Model{
     // a all around search
     function search(){
+      $where = "gametype != ''";
 
       $this->db->select('username, user_id, user_img, gametype');
       $this->db->from('users');
+      $this->db->where($where);
 
       $query = $this->db->get();
       return $query->result_array();
