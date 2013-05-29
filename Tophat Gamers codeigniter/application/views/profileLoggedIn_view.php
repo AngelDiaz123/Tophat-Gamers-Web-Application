@@ -62,20 +62,31 @@
 
 		<div id="profile_bio">
 			<p class="bio_title">Player Biography</p>
-			<p class="bio"><?php echo $profile['bio']; ?></p>
+			<p class="bio"><?php
+					if(isset($profile['bio'])){
+						echo $profile['bio'];
+					}else{
+						echo "No bio available";
+					};
+				?></p>
 		</div>
 		<div id="profile_video">
 			<h1>Videos</h1>
 		</div>
 		<div id="profile_post">
 			<h1>Post</h1>
-			<?php foreach($post as $item){ ?>
+			<?php 
+			if(sizeof($post) > 0){
+				foreach($post as $item){ ?>
 				<div class="blog_container">
 					<a class="blogTitle_link" href="<?php echo base_url("index.php/post/blog/$item[post_id]"); ?>">
 					<?php echo $item['title'].'</a></br>';
 					echo $item['post'].'</br>'; ?>
 				</div>
-			<?php } ?>
+			<?php }
+			}else{
+				echo "No blogs made";
+			}?>
 		</div>
 	</section>
 
