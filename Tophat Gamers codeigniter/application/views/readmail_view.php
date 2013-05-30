@@ -18,9 +18,9 @@
 				<span class="line">|</span>
 				<a class="dashboard_link navigation" href="<?php echo base_url('index.php/dashboard/'); ?>">Dashboard</a>
 				<span class="line">|</span>
-				<a class="create_link navigation" href="<?php echo base_url('index.php/createPost'); ?>">Create a Post</a>
+				<a class="create_link navigation" href="<?php echo base_url('index.php/createpost'); ?>">Create a Post</a>
 				<span class="line">|</span>
-				<a class="read_link navigation onPage" href="<?php echo base_url('index.php/readMail'); ?>">Mail</a>
+				<a class="read_link navigation onPage" href="<?php echo base_url('index.php/readmail'); ?>">Mail</a>
 				<a class="logout_link navigation" href="<?php echo base_url('index.php/dashboard/logout'); ?>">Logout</a>
 			</header>
 		</div>
@@ -28,13 +28,12 @@
 	<div class="top_banner"></div>
 
 	<div class="mail_div">
-		<div class="list_mail">
-			<h1 class="message_top">Read messages</h1>
+		<h1 class="message_top">Read messages</h1>
 			<div class="mail_top">
 				<p class="list_title">Title</p>
 				<p class="list_message">Message</p>
 			</div>
-			<div
+		<div class="list_mail">
 			<?php 
 				if(isset($message)){
 					echo $message; 

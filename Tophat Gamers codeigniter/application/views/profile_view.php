@@ -214,7 +214,7 @@
 	                }
 	            },
 	            error: function(){
-	               videos.innerHTML('<p>No videos available</p>');
+	               videos.innerHTML='<h1>Videos</h1><p>No videos available</p>';
 	            }
 	        });
 		}

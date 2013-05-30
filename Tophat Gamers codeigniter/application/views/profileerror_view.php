@@ -41,9 +41,9 @@
 				<span class="line">|</span>
 				<a class="dashboard_link navigation" href="<?php echo base_url('index.php/dashboard/'); ?>">Dashboard</a>
 				<span class="line">|</span>
-				<a class="create_link navigation" href="<?php echo base_url('index.php/createPost'); ?>">Create a Post</a>
+				<a class="create_link navigation" href="<?php echo base_url('index.php/createpost'); ?>">Create a Post</a>
 				<span class="line">|</span>
-				<a class="read_link navigation" href="<?php echo base_url('index.php/readMail'); ?>">Mail</a>
+				<a class="read_link navigation" href="<?php echo base_url('index.php/readmail'); ?>">Mail</a>
 				<a class="logout_link navigation" href="<?php echo base_url('index.php/dashboard/logout'); ?>">Logout</a>
 			</header>
 		</div>
@@ -208,7 +208,7 @@
 	                }
 	            },
 	            error: function(){
-	               videos.innerHTML('<p>No videos available</p>');
+	               videos.innerHTML='<h1>Videos</h1><p>No videos avialable</p>');
 	            }
 	        });
 		}
