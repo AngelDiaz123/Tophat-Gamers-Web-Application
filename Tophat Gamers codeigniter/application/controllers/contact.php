@@ -18,16 +18,11 @@ class contact extends CI_Controller {
   	}
 
 	function emailsupport(){
-		//$subject = $this->input->post('options');
-	    //$message = $this->input->post('message');
-	    //echo $subject."</br>";
-
-		// echo "fuck your message and fuck you";
-	  	// if($this->session->userdata('logged_in')){
-	  	// 	redirect('welcome','refresh');
-	   //  }else{
-	   //  	redirect('dashboard','refresh');
-	   //  }
+		if($this->session->userdata('logged_in')){
+	  		redirect('dashboard','refresh');
+	    }else{
+	    	redirect('welcome','refresh');
+	    }
 
 	}
 
