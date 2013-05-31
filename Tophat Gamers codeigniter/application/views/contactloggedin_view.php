@@ -36,7 +36,7 @@
 			</select>
 			<p>Message</p>
 			<textarea rows="20" cols="70" name="message">Leave your message here!</textarea>
-			<input type="submit" value="Send Email" class="contact_submit">
+			<a href="mailto:tophatgamerscompany@gmail.com?Subject=Hello%20again"><input type="submit" value="Send Email" class="contact_submit"></a>
 		</form>
 	</section>
 
