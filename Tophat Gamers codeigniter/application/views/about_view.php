@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Contact Us | Tophat Gamers</title>
+	<title>About Us | Tophat Gamers</title>
 	<link href="<?php echo base_url('images/favicon.ico'); ?>" rel="icon" type="image/x-icon" />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Didact+Gothic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('/css/main.css') ?>">
@@ -16,21 +16,12 @@
 	</div>
 	<div class="top_banner"></div>
 
-	<section class="contact_div">
-		<h1 class="contact_header">Contact Us</h1>
-		<p class="contact_one_linner">I want to thank you for becoming a user of this website.  If you have a concern or just want to thank us for making this site a awesome, please will out the form and it will email the customer service department directly.  Thank you!</p>
-		<?php echo form_open('contact/emailsupport'); ?>
-			<p>Reason to contact us</p>
-			<select name="options">
-				<option value="Problem with site">Problem with site</option>
-				<option value="Issue with content">Issue with content</option>
-				<option value="o thank us for the service">To thank us for the service</option>
-				<option value="other">Other</option>
-			</select>
-			<p>Message</p>
-			<textarea rows="20" cols="70" name="message">Leave your message here!</textarea>
-			<input type="submit" value="Send Email" class="contact_submit">
-		</form>
+	<section class="about_div">
+		<h1 class="contact_header">About Us</h1>
+		<h3 class="lead">Angel Diaz</h3>
+		<h3 class="lead_dev">Developer, Designer and Idea Maker</h3>
+		<p>I am web developer and web designer that was orginally suppose to be a game developer but the web called to me instead.  I am a military brat and have lived in at least 10 different states and another country by the time I was 18.</p>
+		<p>Tophat Gamers was built out of my love for video games and a need to better a community that gets a bad reputation around the world.  Gamers are considered</p> 
 	</section>
 
 	<div class="all_footer_banner"></div>

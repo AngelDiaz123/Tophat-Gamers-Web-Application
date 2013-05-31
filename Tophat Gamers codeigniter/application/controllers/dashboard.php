@@ -45,10 +45,10 @@ class Dashboard extends CI_Controller {
 
 
         $config['upload_path'] = 'uploads';
-        $config['allowed_types'] = 'jpg|gif|png';
-        $config['max_size'] = '25800';
-        $config['max_width'] = '1920';
-        $config['max_height'] = '1080';
+        $config['allowed_types'] = 'gif|jpg|png|jpeg';
+        $config['max_size'] = '0';
+        $config['max_width'] = '0';
+        $config['max_height'] = '0';
 
         $this->load->library('upload', $config);
 

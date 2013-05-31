@@ -142,8 +142,8 @@ body {
 
 .top_login_button {
 	float: right;
-	margin-right: 380px;
 	margin-top: 40px;
+	margin-right: 40px;
 	background: #ea3200; /* Old browsers */
 	background: -moz-linear-gradient(top, #ea3200 0%, #ef5929 48%, #ea3200 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ea3200), color-stop(48%,#ef5929), color-stop(100%,#ea3200)); /* Chrome,Safari4+ */
@@ -169,7 +169,7 @@ body {
 .top_register_link {
 	float: right;
 	color: white;
-	margin-right: -180px;
+	margin-right: 50px;
 	margin-top: 45px;
 	font-size: 1.2em;
 	text-decoration: none;
@@ -204,6 +204,11 @@ body {
 .nav_holder {
 	width: 960px;
 	margin: 0 auto;
+}
+
+.header_holder {
+	margin: 0 auto;
+	width: 960px;
 }
 
 /*----- Home Page ------------*/
@@ -1008,6 +1013,12 @@ body {
 	float: left;
 	margin-left: 10px; 
 	width: 630px;
+}
+
+/*------------- about us -----------------*/
+.about_div {
+	width: 960px;
+	margin: 0 auto;
 }
 
 /*------------- Global Footer ------------*/

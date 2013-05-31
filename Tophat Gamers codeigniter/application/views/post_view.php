@@ -28,8 +28,8 @@
 				</div>
 			</form>
 		</div>
-		<a href="<?php echo base_url('index.php/search'); ?>" class="logo_link"><img src="<?php echo base_url('images/tophatGamers.png'); ?>" class="top_logo"></a>
-		<header>
+		<header class="header_holder">
+			<a href="<?php echo base_url('index.php/search'); ?>" class="logo_link"><img src="<?php echo base_url('images/tophatGamers.png'); ?>" class="top_logo"></a>
 			<a class="popup" href="#login_profile"><button class="top_login_button">Log In</button></a>
 			<a href="<?php echo base_url('index.php/register'); ?>" class="top_register_link">Register</a>
 		</header>

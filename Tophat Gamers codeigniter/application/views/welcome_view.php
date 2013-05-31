@@ -70,7 +70,7 @@
 
 	<div class="footer_background">
 		<footer>
-			<a href="#" class="about">About Us</a>
+			<a href="<?php echo base_url('index.php/about'); ?>" class="about">About Us</a>
 			<a href="<?php echo base_url('index.php/contact'); ?>" class="contact">Contact Us</a>
 			<a href="#" class="faq">FAQs</a>
 			<p class="copyright">&copy; 2013 Angel Productions</p>
