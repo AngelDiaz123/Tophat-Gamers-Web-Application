@@ -812,6 +812,11 @@ body {
 	letter-spacing: .07em;
 }
 
+.comment_holder {
+	margin-top: 50px;
+	height: 250px;
+}
+
 /*------------- Register -----------------*/
 .register_form_div {
 	width: 600px;

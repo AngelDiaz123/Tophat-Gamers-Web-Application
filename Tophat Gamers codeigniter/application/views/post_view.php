@@ -41,8 +41,10 @@
 		<div class="blog_info">
 			<?php echo $blog[0]['post']; ?>
 		</div>
-		<p>Must be <a class="popup" href="#login_profile">logged in</a> to comment on post</p>
-	    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		<div class='comment_holder'>
+			<p>Must be <a class="popup" href="#login_profile">logged in</a> to comment on post</p>
+	    	<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		</div>
     
 	</section>
 
