@@ -25,15 +25,15 @@
 		<?php echo validation_errors(); ?>
 		<?php echo form_open('registeruser'); ?>
 			<label for="username">Username:</label>
-			<input type="text" size="20" class="username_register" name="username">
+			<input type="text" class="username_register" name="username">
 			<br/>
 			<label for="username">Email:</label>
-			<input type="text" size="20" class="email_register" name="email">
+			<input type="text" class="email_register" name="email">
 			<br/>
 			<label for="password">Password:</label>
-			<input type="password" size="20" class="password_register" name="password">
+			<input type="password" class="password_register" name="password">
 			<br/>
-			<input type="submit" value="Login">
+			<input type="submit" value="Login" class="reg_btn">
 		</form>
 	</div>
 

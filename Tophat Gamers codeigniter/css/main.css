@@ -814,8 +814,45 @@ body {
 
 /*------------- Register -----------------*/
 .register_form_div {
-	width: 400px;
+	width: 600px;
+	height: 560px;
 	margin: 0 auto;
+}
+
+.username_register {
+	margin-left: 10px;
+	width: 400px;
+}
+
+.email_register {
+	margin-top: 15px;
+	margin-left: 45px;
+	width: 400px;
+}
+
+.password_register {
+	margin-top: 15px;
+	margin-left: 10px;
+	width: 400px;
+}
+
+.reg_btn {
+	color: white;
+	background: #ea3200; /* Old browsers */
+	background: -moz-linear-gradient(top, #ea3200 0%, #ef5929 48%, #ea3200 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ea3200), color-stop(48%,#ef5929), color-stop(100%,#ea3200)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #ea3200 0%,#ef5929 48%,#ea3200 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea3200', endColorstr='#ea3200',GradientType=0 ); /* IE6-9 */
+	float: right;
+	border-radius: 15px;
+	border: none;
+	font-size: .75em;
+	width: 100px;
+	margin-top: 10px;
+	margin-right: 110px;
 }
 
 /*------------- Dashboard ----------------*/
