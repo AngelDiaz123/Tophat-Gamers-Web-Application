@@ -8,6 +8,7 @@ class about extends CI_Controller {
  }
 
 	function index(){
+		//to get to about me page
 	  	if($this->session->userdata('logged_in')){
 	  		$this->load->view('aboutloggedin_view');
 	    }else{
