@@ -29,7 +29,7 @@
 	<div class="top_banner"></div>
 
 	<section class="create_div">
-		<?php echo form_open('createPost/savePost/'.$userID); ?>
+		<?php echo form_open('createpost/savepost/'.$userID); ?>
 			<h1 class="post_title">Title of post</h1>
 			<input type="text" name="title" class="title_input">
 			</br>
