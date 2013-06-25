@@ -3,15 +3,6 @@ Tophat Gamer - READ ME
 URL to live site:
 tophatgamers.com
 
-hosting for site:
-a2hosting.com
-
-to connect to database on live site:
-base_url: http://www.tophatgamers.com
-username: tophatga_admin
-database: tophatga_database
-password: camb2624
-
 setup for localhost:
 base_url: http://localhost:8888/TophatGamers
 username: root
