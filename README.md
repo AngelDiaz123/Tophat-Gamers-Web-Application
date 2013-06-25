@@ -1,7 +1,7 @@
 Tophat Gamer - READ ME
 
 URL to live site:
-tophatgamers.com
+www.tophatgamers.com
 
 setup for localhost:
 base_url: http://localhost:8888/TophatGamers
